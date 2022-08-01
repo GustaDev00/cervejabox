@@ -1,0 +1,32 @@
+body.produto {
+    main {
+        .tpl-content {
+            > div.tpl-center {
+                display: flex;
+                flex-direction: column;
+
+                .bread-crumb {
+                    order: 1;
+                }
+                #area-a {
+                    order: 2;
+                }
+                #area-conteudo {
+                    order: 3;
+                }
+
+                #related {
+                    order: 4;
+                }
+
+                #compreJunto {
+                    order: 5;
+                }
+
+                #qvvtb {
+                    order: 6;
+                }
+            }
+        }
+    }
+}
