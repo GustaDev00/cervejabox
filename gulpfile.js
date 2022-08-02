@@ -120,4 +120,4 @@ gulp.task(
     'dev',
     gulp.parallel('style-sass', 'script', 'style-cssold', 'scriptOld', watchDev)
 )
-gulp.task('build', gulp.parallel('default', 'style-sass', 'script'))
+gulp.task('build', gulp.parallel('style-sass', 'script', 'style-cssold', 'scriptOld'))
