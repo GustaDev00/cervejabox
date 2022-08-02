@@ -103,8 +103,10 @@ body.home .tpl-wrapper main .tpl-content section#bloco-a #bannerPrincipal {
     display: none !important;
 }
 
-.clube-de-cervejas main {
-    margin: 100px 0 0 0 !important;
+@media screen and (max-width: 1024px) {
+    .clube-de-cervejas main {
+        margin: 100px 0 0 0 !important;
+    }
 }
 
 .clube-de-cervejas .nav-gwbar-single-rows {

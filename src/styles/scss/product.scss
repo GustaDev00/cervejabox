@@ -15,8 +15,33 @@ body.produto {
                     order: 3;
                 }
 
-                #related {
+                .pack {
                     order: 4;
+                    margin-top: 40px;
+
+                    &-title {
+                        border-bottom: 2px solid #d3d3d3;
+                        padding-bottom: 5px;
+                        padding-top: 5px;
+                        margin-bottom: 15px;
+                        clear: both;
+                        font-family: inherit;
+                        font-size: 18px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        color: #333;
+                        width: 100%;
+                        text-align: center;
+                        display: block;
+                    }
+
+                    &-list {
+                        li {
+                            .shelf-wrapper .wrapperConteudo .boxWrapPreceComprar.socio .left span {
+                                font-size: 9px !important;
+                            }
+                        }
+                    }
                 }
 
                 #compreJunto {
