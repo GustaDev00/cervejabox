@@ -44,7 +44,8 @@ const paths = {
     },
     scripts: {
         dest: './build/arquivos/',
-        src: './src/scripts/app/pages/*.js'
+        src: './src/scripts/app/index.js',
+        watch: './src/scripts/app/**/*.js'
     },
     scriptsOld: {
         dest: './build/old/js/',
@@ -108,7 +109,7 @@ const watchDev = () => {
         browserSync.notify('Reinjetando estilos...', 3000)
         browserSync.reload('*.css')
     })
-    gulp.watch(paths.scripts.src, gulp.series('script')).on('change', browserSync.reload)
+    gulp.watch(paths.scripts.watch, gulp.series('script')).on('change', browserSync.reload)
 
     gulp.watch(paths.cssold.src, gulp.series('style-cssold')).on('change', () => {
         browserSync.notify('Reinjetando estilos...', 3000)
