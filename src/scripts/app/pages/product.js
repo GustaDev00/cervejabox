@@ -1,5 +1,4 @@
 const Product = () => {
-  alert('asd')
 
   const pageProduct = {
     methods: {
