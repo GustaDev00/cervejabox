@@ -1,4 +1,4 @@
-const Everbrew = () => {
+const PlanoEverbrew = () => {
     const EverAclamadas = document.querySelectorAll('input[name="plan-aclamados"]')
     const EverNovidades = document.querySelectorAll('input[name="plan-novidade"]')
     const EverTreze = document.querySelectorAll('input[name="plan-treze"]')
@@ -51,8 +51,17 @@ const Everbrew = () => {
                 dots: false,
                 arrows: !0
             })
+
+            $('.wrapper-plans .all-plans').slick({
+                infinite: !0,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: !0
+            })
         }
     }
+
 }
 
-export default Everbrew
+export default PlanoEverbrew

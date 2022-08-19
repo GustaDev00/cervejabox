@@ -1,27 +1,10 @@
 import Product from './pages/product'
 import Everbrew from './pages/clube-everbrew'
+import PlanoEverbrew from './pages/plano-everbrew';
 
 const $bodyClass = document.querySelector('body');
 console.log($bodyClass.className.toLowerCase().includes('internasComum hotsitev2 colecao everbrew'))
 
 $bodyClass.className.toLowerCase().includes('produto') && Product()
-$bodyClass.className.toLowerCase().includes('everbrew') && Everbrew()
-
-
-window.setTimeout(function () {
-    const valorsCB = document.querySelector('.CB-teste-mes-unico span'); // class="CB-teste-mes-unico span"
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    var styleSearch = window.location.search;
-    if (styleSearch.indexOf('utmi_cp=clubemensal') > -1) {
-        valorsCB.style.display = 'none';
-        styleElem.innerHTML = ".CB-teste-mes-unico::after {content: ' /1Âº mÃªs' !important;font-weight: 300;}";
-    }
-}, 3000)
-
-/*Funcao para adicionar texto 'A PARTIR DO 2Âº MES R$109,99' quando estiver na utmi_cp selecionadas*/
-const textoCB = document.querySelector('.cb-cc__card-text'); // class="cb-cc__card-text"
-var styleSearchUrl = window.location.search;
-if (styleSearchUrl.indexOf('utmi_cp=clubemensal') > -1) {
-    textoCB.style.display = 'block';
-}
-
+$bodyClass.className.toLowerCase().includes('everbrew page1') && Everbrew()
+$bodyClass.className.toLowerCase().includes('everbrew page2') && PlanoEverbrew()
