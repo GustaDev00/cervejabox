@@ -1,0 +1,25 @@
+#wapperBottomTriplo.wapperLinkBanner{
+    .box-banner{
+        width: 19% !important;
+        @media (max-width: 800px) {
+            width: 100% !important;
+        }
+        a{
+            &:hover{
+                animation: none !important;
+            }
+            img{
+                width: 80% !important;
+                margin: auto !important;
+            }
+            p{
+                font-size: 24px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: #333;
+                margin-top: 8px;
+                text-align: center;
+            }
+        }
+    }
+}
