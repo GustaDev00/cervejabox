@@ -1,6 +1,6 @@
 #wapperBottomTriplo.wapperLinkBanner{
     .box-banner{
-        width: 19% !important;
+        width: calc(100% / 5) !important;
         @media (max-width: 800px) {
             width: 100% !important;
         }
