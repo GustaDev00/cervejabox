@@ -1,0 +1,16 @@
+[id^="ResultItems"] {
+    ul > li:last-of-type a .image-main img[src^="http"],
+    .prateleira:last-of-type ul > li:last-of-type a .image-main img[src^="http"] {
+        animation-duration: 1ms;
+        animation-name: imageShow;
+
+        @keyframes imageShow {
+            from {
+                opacity: 0.99;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}
