@@ -1,0 +1,189 @@
+.modalZap-blackout{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #00000073;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+}
+
+.lock-modal{
+    overflow: hidden;
+}
+
+.modalZap-openned {
+position: fixed;
+border-radius: 5px;
+padding: 2px 10px;
+width: 300px;
+height: 500px;
+z-index: 10000;
+background: white;
+left: calc(50vw - 150px);
+top: calc(50vh - 250px);
+}
+
+.modalZap-openned .modalZap-openned-main{
+text-align: center;
+}
+
+.modalZap-openned img{
+width: 100px;
+}
+
+.modalZap-openned-header{
+display: flex;
+justify-content: flex-end;
+margin: 10px;
+border: none;
+background: none;
+}
+
+.modalZap-openned-header button{
+border: none;
+background: none;
+font-size: 20px;
+color: #646464;
+cursor: pointer;
+}
+
+.modalZap-openned-main h2{
+color: #646464;
+text-transform: uppercase;
+margin: 10px 0;
+font-size: 18px;
+
+}
+.modalZap-openned-main{
+position: relative;
+bottom: 10px;
+}
+.modalZap-openned-main p{
+color: #646464;
+font-size: 14px;
+text-transform: uppercase;
+margin: 10px 0;
+
+}
+
+.buttons-links{
+display: flex;
+flex-direction: column;
+}
+
+.buttons-links button{
+width: 80%;
+margin: 2px auto;
+height: 40px;
+display: flex;
+border: none;
+align-items: center;
+cursor: pointer;
+}
+
+.buttons-links button p{
+color: white;
+margin-left: 30px;
+}
+
+.buttons-links button img{
+width: 35px;
+margin-left: 15px;
+}
+
+button.link-whasapp::after {
+content: '';
+background: url(https://cervejabox.vteximg.com.br/arquivos/whatsapp.png)
+}
+
+button.link-whasapp {
+background: #1bd741;
+}
+
+button.link-telegram {
+background: #039be5;
+}
+
+button.link-telegram p{
+margin-left: 35px;
+}
+
+button.link-telegram img{
+width: 30px;
+border: 1px solid white;
+border-radius: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    body main {
+        margin-top: 150px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .stpl-header .nav-gwbar-single-row {
+        display: flex;
+        margin-top: 2px
+    }
+}
+
+header .nav-gwbar-single-row {
+    display: none;
+    place-content: center;
+    width: 100%;
+    background: #f1b616;
+}
+
+header .nav-gwbar-single-row .nav-a {
+    margin: 15px 0px 15px 0px;
+    align-self: center;
+    color: #41484d;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase
+}
+
+header .nav-gwbar-single-row .margin-rgt {
+    margin-right: 20px;
+}
+
+/* css top bar fixed */
+
+@media screen and (min-width: 992px) {
+    .nav-gwbar-single-rows {
+      display : none !important;
+    }
+  }
+  .nav-gwbar-single-rows {
+    display : flex;
+    align-content : center;
+    justify-content : center;
+    width : 100%;
+    background : rgb(96, 200, 98);
+  }
+  
+  .nav-gwbar-single-rows .nav-a {
+    margin : 8px 0px;
+    align-self : center;
+    color : rgb(0, 0, 0);
+    font-size : 16.5px;
+    letter-spacing : 0.5px;
+    font-weight : 500;
+    text-transform : uppercase;
+  }
+  
+  .nav-gwbar-single-rows .nav-a span {
+    color : rgb(255, 255, 255);
+    text-decoration-line : none;
+    text-decoration-thickness : initial;
+    text-decoration-style : initial;
+    text-decoration-color : initial;
+  }
+  
+  .nav-gwbar-single-rows .nav-a span:hover {
+    text-decoration-line : underline;
+    text-decoration-thickness : initial;
+    text-decoration-style : initial;
+    text-decoration-color : initial;
+  }

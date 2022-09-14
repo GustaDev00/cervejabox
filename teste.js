@@ -1,29 +1,8 @@
-window.setTimeout(function () {
-    const valorsCB = document.querySelector('.CB-teste-mes-unico span'); // class="CB-teste-mes-unico span"
-    var styleElem = document.head.appendChild(document.createElement("style"));
-    var styleSearch = window.location.search;
-    if (styleSearch.indexOf('utmi_cp=clubemensal') > -1) {
-        valorsCB.style.display = 'none';
-        styleElem.innerHTML = ".CB-teste-mes-unico::after {content: ' /1º mês' !important;font-weight: 300;}";
-    }
-}, 3000)
-
-/*Funcao para adicionar texto 'A PARTIR DO 2º MES R$109,99' quando estiver na utmi_cp selecionadas*/
-const textoCB = document.querySelector('.cb-cc__card-text'); // class="cb-cc__card-text"
-var styleSearchUrl = window.location.search;
-if (styleSearchUrl.indexOf('utmi_cp=clubemensal') > -1) {
-    textoCB.style.display = 'block';
-}
-
 window.onload = () => {
-    localStorage.removeItem("modalZap");
-    document.onmouseleave = function(){
-        if (!localStorage.getItem("modalZap")) {
+    setTimeout(() => {
+        if (localStorage.getItem("modalZap")) {
             localStorage.setItem("modalZap", true);
-
-            const bodyPage = document.querySelector('body');
-            bodyPage.classList.add('lock-modal');
-            bodyPage.innerHTML += `
+            document.querySelector('body')+= `
             <div class="modalZap">
 <div class="modalZap-openned">
     <div class="modalZap-openned-header">
@@ -64,26 +43,20 @@ window.onload = () => {
 </div>
 <div class="modalZap-blackout"></div>
 </div>
-            `;
-
-            const modalZapClose = () => {
-                document.querySelector(".modalZap").remove();
-                bodyPage.classList.remove('lock-modal');
-            }
+            `
             const closeModal = document.querySelector(
                 ".modalZap-openned-header button"
             );
             const closeModalBlackout = document.querySelector(".modalZap-blackout");
             const openZap = document.querySelector(".link-whasapp");
             const openTelegram = document.querySelector(".link-telegram");
-
+            
             closeModal.addEventListener("click", () => {
-                modalZapClose();
+                document.querySelector(".modalZap").remove();
             });
             closeModalBlackout.addEventListener("click", () => {
-                modalZapClose();
+                document.querySelector(".modalZap").remove();
             });
-
             openZap.addEventListener("click", () => {
                 window.location = "https://chat.whatsapp.com/ITCCLqG9wofDETz2ivDSp1";
             });
@@ -91,5 +64,5 @@ window.onload = () => {
                 window.location = "https://t.me/+ixH2y2_e2e43ZDgx";
             });
         }
-    }
+    }, 5000);
 };
