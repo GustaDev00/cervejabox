@@ -1,13 +1,16 @@
 #wapperBottomTriplo.wapperLinkBanner{
     .tpl-center{
         display: flex;
+        @media (max-width: 800px) {
+            display: initial;
+        }
     }
     .box-banner{
         width: calc(100% / 5) !important;
         margin: 0 10px;
         @media (max-width: 800px) {
-            margin: 0;
-            width: fit-content !important;
+            width: 90% !important;
+            margin: auto;
         }
         a{
             &:hover{
