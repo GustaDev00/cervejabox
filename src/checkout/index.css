@@ -28,20 +28,23 @@
 }
 
 .modal-discount .modal-discount-open .copy-code{
-  background-color: #ffb600;
-    border-bottom: 2px solid #d0a14c !important;
-    border: 0;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    padding: 10px 0;
-    margin-top: 10px;
-    font-weight: 800;
-    text-transform: uppercase;
-    background-image: none !important;
-    color: #000;
-    font-family: "Teko",sans-serif;
-    text-shadow: none !important;;
+  position: absolute;
+  right: 30px;
+  top: 133px;
+  background-color: #c1c1c1;
+  border: 0;
+  padding: 8px 10px 5px;
+  margin-top: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: none !important;
+  color: #000;
+  line-height: 13px;
+  font-size: 14px;
+  font-family: "Teko",sans-serif;
+  text-shadow: none !important;
 }
 
 .modal-discount .modal-discount-open .copy-code:hover{

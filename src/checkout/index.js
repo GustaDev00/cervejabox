@@ -21,7 +21,7 @@ function openModalDiscount() {
               <button class="btn-discount">
                 <img src="/arquivos/desconto-10.png" alt="Desconto" />
               </button>
-              <button class="copy-code">Clique aqui para copiar o cupom!</button>
+              <button class="copy-code">COPIAR <BR /> CUPOM</button>
             </div>
             <div class="modal-discount-blackout"></div>
           </div>`
@@ -62,11 +62,10 @@ function openModalDiscount() {
         }
       },
       init: function(){
-        if(!window.location.hash.includes('cart')) return
-
         document.onmouseleave = function(){
+          if(!window.location.hash.includes('cart')) return
           if(!localStorage.getItem("modalDiscount")) {
-            // localStorage.setItem("modalDiscount", true);
+            localStorage.setItem("modalDiscount", true);
             ModalFunction.event.showModal()
           }
         }
