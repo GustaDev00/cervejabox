@@ -1,3 +1,6 @@
+.modal-discount{
+  display: none;
+}
 .modal-discount-blackout{
   position: fixed;
   top: 0px;
@@ -29,9 +32,9 @@
 
 .modal-discount .modal-discount-open .copy-code{
   position: absolute;
-  right: 30px;
-  top: 133px;
-  background-color: #c1c1c1;
+  right: 38px;
+  top: 155px;
+  background-color: #03ba04;
   border: 0;
   padding: 8px 10px 5px;
   margin-top: 10px;
@@ -40,8 +43,8 @@
   text-transform: uppercase;
   text-align: center;
   background-image: none !important;
-  color: #000;
-  line-height: 13px;
+  color: #fff;
+  line-height: 12px;
   font-size: 14px;
   font-family: "Teko",sans-serif;
   text-shadow: none !important;

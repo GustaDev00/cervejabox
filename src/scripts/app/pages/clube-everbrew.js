@@ -2,6 +2,7 @@ const Everbrew = () => {
     const EverAclamadas = document.querySelectorAll('input[name="plan-aclamados"]')
     const EverNovidades = document.querySelectorAll('input[name="plan-novidade"]')
     const EverTreze = document.querySelectorAll('input[name="plan-treze"]')
+
     if (!EverAclamadas.length) return
     EverAclamadas.forEach(i => {
         i.addEventListener('change', () => {
@@ -36,8 +37,7 @@ const Everbrew = () => {
             :
             swal("Nenhum plano foi selecionado!")
     })
-
-    window.onload = () => {
+    $(document).ready(function () {
         if (!EverTreze.length) return
         EverTreze.forEach(i => {
             i.removeAttribute("disabled");
@@ -51,8 +51,18 @@ const Everbrew = () => {
                 dots: false,
                 arrows: !0
             })
+
+            $('.wrapper-plans .all-plans').slick({
+                infinite: !0,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: !0
+            })
         }
-    }
+    })
+
 }
+
 
 export default Everbrew

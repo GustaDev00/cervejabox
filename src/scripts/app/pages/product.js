@@ -11,7 +11,7 @@ const Product = () => {
 
             if (!products.length) return
 
-            const sectionsPage = document.querySelector('main .tpl-content .tpl-center');
+            const sectionsPage = document.querySelector('#react-compre-id');
             sectionsPage.innerHTML += this.wrtiteHtml(products);
             this.carrossel();
 

@@ -51,18 +51,8 @@ const PlanoEverbrew = () => {
                 dots: false,
                 arrows: !0
             })
-
-            $('.wrapper-plans .all-plans').slick({
-                infinite: !0,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: !0
-            })
         }
     }
-
 }
-
 
 export default PlanoEverbrew
