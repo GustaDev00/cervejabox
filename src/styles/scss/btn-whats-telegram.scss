@@ -1,0 +1,25 @@
+.btns-whats-telegram {
+    position: fixed;
+    bottom: 2px;
+    display: flex;
+    width: 100%;
+    z-index: 99;
+    @media (min-width: 700px) {
+        justify-content: center;
+    }
+    display: none;
+    a{
+        img{
+            width: 50vw;
+            @media (min-width: 700px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    body .btns-whats-telegram {
+        display: none !important;
+    }
+}

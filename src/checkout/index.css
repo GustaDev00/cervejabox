@@ -1,5 +1,17 @@
-.modal-discount{
-  display: none;
+.modal-discount-header {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  position: relative;
+  top: 0px;
+  left: 20px;
+}
+
+span.close-modal-discount {
+  background: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
 .modal-discount-blackout{
   position: fixed;
@@ -33,7 +45,7 @@
 .modal-discount .modal-discount-open .copy-code{
   position: absolute;
   right: 38px;
-  top: 155px;
+  top: 180px;
   background-color: #03ba04;
   border: 0;
   padding: 8px 10px 5px;

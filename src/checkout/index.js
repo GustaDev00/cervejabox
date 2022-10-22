@@ -18,6 +18,11 @@ function openModalDiscount() {
           <div class="modal-discount">
             <textarea class="code_discount">ganhei10</textarea>
             <div class="modal-discount-open">
+            <div class="modal-discount-header">
+              <span class="close-modal-discount">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </span>
+            </div>
               <button class="btn-discount">
                 <img src="/arquivos/desconto-10.png" alt="Desconto" />
               </button>
@@ -29,6 +34,14 @@ function openModalDiscount() {
         closeModal: function() {
           const blackout = document.querySelector('.modal-discount-blackout')
           if(!blackout) return
+
+          const btnClose = document.querySelector('.close-modal-discount')
+          if(!btnClose) return
+
+          btnClose.addEventListener('click', ()=>{
+            const modal = document.querySelector('.modal-discount')
+            modal.remove()
+          })
 
           blackout.addEventListener('click', ()=>{
             const modal = document.querySelector('.modal-discount')
