@@ -2,17 +2,43 @@
     position: fixed;
     bottom: 2px;
     display: flex;
+    flex-direction: column;
     width: 100%;
     z-index: 99;
-    @media (min-width: 700px) {
-        justify-content: center;
-    }
-    display: none;
-    a{
+
+    figure{
+        position: relative;
+        height: 70px;
+        overflow: hidden;
         img{
-            width: 50vw;
+            width: 100%;
             @media (min-width: 700px) {
-                width: 100%;
+                width: fit-content;
+            }
+        }
+        figcaption{
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 28px;
+        }
+    }
+
+    @media (min-width: 700px) {
+        align-items: center;
+    }
+    .btns-click {
+        display: flex;
+        flex-direction: row;
+        a {
+            img {
+                width: 50vw;
+
+                @media (min-width: 700px) {
+                    width: 100%;
+                }
             }
         }
     }

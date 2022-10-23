@@ -70,6 +70,26 @@ span.close-modal-discount {
   width: 350px;
 }
 
+@media screen and (max-width: 1025px){
+  .modal-discount{
+    display: none;
+  }
+  .modal-discount-header {
+    left: 0px;
+    margin-bottom: 10px;
+  }
+  .modal-discount-open{
+    left: calc(50vw - 150px);
+  }
+  .modal-discount-open .btn-discount img{
+    width: 300px;
+  }
+
+  .modal-discount .modal-discount-open .copy-code{
+    display: none;
+  }
+}
+
 
 div#dark {
     position: fixed;

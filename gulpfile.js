@@ -7,28 +7,19 @@ const sourcemaps = require('gulp-sourcemaps') //Mapea codigo SASS para debug no 
 const sass = require('gulp-sass')(require('node-sass')) //SASS
 const autoprefixer = require('autoprefixer') //Aplica prefixo de navegadores antigos
 const postcss = require('gulp-postcss') //PostCSS
-const cssnano = require('cssnano') //Minifica css
+const cssnano = require('cssnano')({zindex: false}) //Minifica css
 const mqpacker = require('css-mqpacker') //Unifica todas as @medias da mesma condição em apenas uma
-const babel = require('gulp-babel') //Transpila arquivos js para versões antigas do ES
 const terser = require('gulp-terser') //Minifica os arquivos js
-const webp = require('gulp-webp') //transforma imagens para o formato webp
-const changed = require('gulp-changed') //Verifica se houve alterações
-const rename = require('gulp-rename') // Renomeia arquivos
 const browserSync = require('browser-sync').create() //Synca os arquivos com o browser e faz o proxy reverso dos arquivos
 const browserify = require('browserify') //Converte commonJs para ES
 const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 const babelify = require('babelify') //Transpila arquivos js para versões antigas do ES
 const glob = require('glob') //Possibilita o uso da escrita do terminal no browserify
-const replace = require('gulp-replace') //Substitui textos de arquivos
-const replaceName = require('gulp-replace-name') //Substitui nome de arquivos
 const clean = require('gulp-clean') //Deleta diretorios ou arquivos
 const tsify = require('tsify')
-const process = require('process')
 const config = {
     nickName: 'cervejabox',
-    accountName: 'cervejabox',
-    https: true
 }
 const paths = {
     dist: {

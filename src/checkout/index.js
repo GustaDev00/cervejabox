@@ -82,6 +82,16 @@ function openModalDiscount() {
             ModalFunction.event.showModal()
           }
         }
+
+        if(window.innerWidth < 1024){
+          setTimeout(()=>{
+            if(!window.location.hash.includes('cart')) return
+            if(!localStorage.getItem("modalDiscount")) {
+              localStorage.setItem("modalDiscount", true);
+              ModalFunction.event.showModal()
+            }
+          }, 30000)
+        }
       }
     }
     ModalFunction.init()
