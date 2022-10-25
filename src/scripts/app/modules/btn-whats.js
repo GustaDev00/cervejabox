@@ -6,7 +6,8 @@ const btnWhats = () => {
         <figure>
             <img src="https://cervejabox.vteximg.com.br/arquivos/fundo.png"
                 alt="background">
-            <figcaption>grupo de ofertas</figcaption>
+            <figcaption class="version_b">ENTRE P/ GRUPO DE OFERTAS</figcaption>
+            <figcaption class="version_a">grupo de ofertas</figcaption>
         </figure>
         <div class="btns-click">
             <a href="https://chat.whatsapp.com/ITCCLqG9wofDETz2ivDSp1" target="_blank" rel="nofollow">
