@@ -1,0 +1,83 @@
+body.black-friday-cerveja.home{
+    #bloco-c{
+        margin-bottom: 0px !important;
+    }
+    .font-size-16{
+        padding: 0 40px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 30px;
+    }
+    #wapperBottomTriplo{
+        .tpl-center{
+            display: flex;
+            justify-content: space-evenly;
+
+            .box-banner{
+                width: 100%;
+                h2{
+                    font-family: inherit;
+                    font-size: 28px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    color: #333;
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                }
+            }
+        }
+    }
+    .tpl-center{
+        .sidebar{
+            display: none;
+        }
+        .wrapperRight{
+            float: unset !important;
+            width: 100% !important;
+
+            .showcase{
+                position: relative;
+                margin-top: 20px;
+                .main{
+                    @media (min-width: 900px){
+                        .sub{
+                            border: none;
+                            height: 10px;
+    
+                            .encontrado{
+                                display: none;
+                            }
+                            .resultado-busca-filtro{
+                                position: absolute;
+                                right: 0px;
+                                top: 0px;
+                            }
+                        }
+                    }
+
+                    .prateleira{
+                        ul>li{
+                            width: 22%;
+                        }
+                    } 
+                }
+                .tituloShowcase{
+                    border-bottom: 2px solid #ffb600;
+                    padding-bottom: 15px;
+                    padding-top: 5px;
+                    margin-bottom: 15px;
+                    clear: both;
+                    font-family: inherit;
+                    font-size: 28px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    color: #333;
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                }
+            }
+        }
+    }
+}

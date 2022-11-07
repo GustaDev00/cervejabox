@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <!-- anti-flicker snippet (recommended)  -->
+    <style>.async-hide { opacity: 0 !important} </style>
+    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-5TL4CWG':true});</script>
+    
+	<!--Metatags-->
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="Abstract" content="Clube de Cervejas Especiais Por Assinatura" />
+	<meta name="author" content="CervejaBox" />
+	<meta name="copyright" content="CervejaBox" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<vtex:contentPlaceHolder id="metaTags" />
+	<!--Metatags-->
+	<vtex:template id="cervejabox-includes-header-seo" />
+	
+	<!-- Start Slick Slide -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- End Slick Slide -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" integrity="sha512-uCQmAoax6aJTxC03VlH0uCEtE0iLi83TW1Qh6VezEZ5Y17rTrIE+8irz4H4ehM7Fbfbm8rb30OkxVkuwhXxrRg==" crossorigin="anonymous" />
+
+	
+	<style>
+        @media screen and (max-width: 768px) {
+            .selecaoDoMes-cro-mobile, .comoFunciona-Mobile-CRO, .beneficios-mobile-CRO {
+                display: block !important;
+            }
+            .selecaoDoMes-cro-desktop, .comoFunciona-Desktop-CRO, .beneficios-desktop-CRO {
+                display: none !important;
+            }
+            body.clube-de-cervejas section.descubraPlano .bts {
+                display: flex !important;
+            }
+            body.clube-de-cervejas section.comoFunciona ul li img {
+                width: 100% !important;
+            }
+            body.clube-de-cervejas section.comoFunciona ul li:nth-child(2):before,
+            body.clube-de-cervejas section.comoFunciona ul li:nth-child(2):after {
+                height: 0 !important;
+                background-image: none !important;
+            }
+            body.clube-de-cervejas section.beneficios ul li {
+                float: left !important;
+                display: grid !important;
+                height: auto !important;
+                place-items: center !important;
+            }
+            body.clube-de-cervejas section.beneficios ul li .wrap h3,
+            body.clube-de-cervejas section.beneficios ul li .wrap p {
+                text-align: center !important;
+            }
+            
+            .clube01-cro {
+                margin-right: auto;
+                width: 50%;
+                padding-right: 10px;
+                text-align: center;
+            }
+            .clube02-cro {
+                margin-left: auto;
+                width: 50%;
+                padding-left: 10px;
+                text-align: center;
+            }
+            
+            .clube01-cro button {
+                margin-top: 10px;
+            }
+            
+            .clube01-cro h4, .clube02-cro h4 {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 22px;
+                text-transform: uppercase;
+                font-family: Oswald,sans-serif;
+            }
+            
+        }
+        
+        .selecaoDoMes-cro-mobile, .comoFunciona-Mobile-CRO, .beneficios-mobile-CRO {
+            display: none;
+        }
+        
+        .selecaoDoMes-cro-desktop, .comoFunciona-Desktop-CRO, .beneficios-desktop-CRO {
+            display: block;
+        }
+        
+        body.clube-de-cervejas section.selecao .titulos {
+            clear: both;
+            overflow: hidden;
+            border-bottom: 2px solid #ffb600;
+            margin-bottom: 20px;
+        }
+        body.clube-de-cervejas section.selecao .titulos h2 {
+            width: 100%;
+            float: left;
+            text-align: left;
+            font-family: inherit;
+            text-align: center;
+            text-transform: uppercase;
+            color: #313131;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 41px;
+            height: 41px;
+            clear: both;
+        }
+        @media screen and (max-width: 520px) {
+            body.clube-de-cervejas section.selecao .titulos button.bt, body.clube-de-cervejas section.selecao .titulos h2 {
+                float: inherit;
+                margin: 0 auto;
+            }
+        }
+        body.clube-de-cervejas section.selecao .titulos button.bt {
+            width: max-content;
+            height: 37px;
+            line-height: 34px;
+            padding: 0;
+            border: 0;
+            margin: 15px auto;
+            padding-left: 60px;
+            padding-right: 60px;
+            background-color: #ffb600;
+            border-bottom: 3px solid #d0a14c;
+            letter-spacing: 0;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: Oswald,sans-serif;
+            color: #000;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+        }
+        
+        .selecaoDoMes-cro-mobile .prateleira ul {
+            flex-wrap: inherit !important;
+        }
+        
+        .cassousel-comoFunciona .slick-prev:before,
+        .cassousel-comoFunciona .slick-next:before,
+        .cassousel-comoFunciona .slick-dots li button:before {
+            display: none;
+        }
+        
+        .cassousel-comoFunciona .slick-arrow  {
+            background-image: url(/arquivos/seta-carrossel.png) !important;
+            background-size: 6px !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            top: 60% !important;
+        }
+        
+        .cassousel-comoFunciona .slick-next {
+            right: 5px !important;
+            margin-top: -30px;
+        }
+        
+        .cassousel-comoFunciona .slick-prev {
+            left: 5px !important;
+        }
+        
+        .cassousel-beneficios .slick-prev:before,
+        .cassousel-beneficios .slick-next:before,
+        .cassousel-beneficios .slick-dots li button:before {
+            display: none;
+        }
+        
+        .cassousel-beneficios .slick-arrow  {
+            background-image: url(/arquivos/seta-carrossel.png) !important;
+            background-size: 6px !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            top: 60% !important;
+        }
+        
+        .cassousel-beneficios .slick-next {
+            right: 5px !important;
+            margin-top: -30px;
+        }
+        
+        .cassousel-beneficios .slick-prev {
+            left: 5px !important;
+        }
+        .descubraPlano .tpl-center{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        body.clube-de-cervejas section.descubraPlano .box{
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+
+	<!-- MENU cervejabox -->
+	<vtex:template id="cervejabox-menumobile" />
+	<h1 class="hidden">Cerveja Box - Loja Online e Clube de Cervejas Artesanais por Assinatura</h1>
+
+	<div class="tpl-wrapper">
+
+		<!-- MAIN -->
+		<main id="main">
+
+			<div class="tpl-content">
+
+				<section id="area-a">
+					<!-- HEADER -->
+					<vtex:template id="cervejabox-header" />
+				</section><!-- FIM AREA-A -->
+
+				<div class="tpl-center">
+
+					<div class="topo">
+						<div class="desktop js--lazyload has--lazyload" data-noscript="">
+							<noscript>
+								<vtex:contentPlaceHolder id="BannerTopo" />
+							</noscript>
+						</div>
+						<div class="mobile js--lazyload has--lazyload" data-noscript="">
+							<noscript>
+								<vtex:contentPlaceHolder id="BannerTopo-MOBILE" />
+							</noscript>
+						</div>
+					</div>
+
+					<section class="comoFunciona comoFunciona-Desktop-CRO">
+						<h2 class="titulo"><span>Como Funciona O Clube De Cervejas</span></h2>
+
+						<ul>
+							<li class="selecao">
+								<img src="/arquivos/cervejabox-clube-selecao.png" title="Seleção clube de cervejas" alt="Seleção clube de cervejas" width="150" height="130" />
+								<h3>1. Cerveja Por Assinatura</h3>
+								<p>Todo mês uma nova seleção de cervejas nacionais e internacionais é feita pelo nosso beer sommelier. As seleções nunca se repetem.</p>
+							</li>
+
+							<li class="entrega">
+								<img src="/arquivos/cervejabox-clube-entrega.png" title="Clube de cervejas entrega em todo Brasil" alt="Clube de cervejas entrega em todo Brasil" width="150" height="130" />
+								<h3>2. Entrega na sua casa</h3>
+								<p>O seu clube de assinatura de cervejas é entregue no conforto da sua casa. Aí é só gelar e degustar!</p>
+							</li>
+
+							<li class="maisvantagens">
+								<img src="/arquivos/cervejabox-clube-maisvantagens.png" title="Vantagens clube de cervejas" alt="Vantagens clube de cervejas" width="150" height="130" />
+								<h3>3. Mais vantagens</h3>
+								<p>No Clube De Assinatura Cerveja Box Explorador ou Cerveja Box estilos você tem vários benefícios exclusivos!</p>
+							</li>
+						</ul>
+					</section>
+					<section class="comoFunciona comoFunciona-Mobile-CRO">
+						<h2 class="titulo"><span>Como Funciona O Clube De Cervejas</span></h2>
+
+						<ul class="cassousel-comoFunciona">
+							<li class="selecao">
+								<img src="/arquivos/cb-clube-01.png" title="Seleção clube de cervejas" alt="Seleção clube de cervejas" width="355" height="130" />
+								<h3>1. Seleção Mensal</h3>
+								<p>Todo mês uma nova seleção de cervejas nacionais e internacionais é feita pelo nosso beer sommelier. As seleções nunca se repetem.</p>
+							</li>
+
+							<li class="entrega">
+								<img src="/arquivos/cb-clube-02.png" title="Clube de cervejas entrega em todo Brasil" alt="Clube de cervejas entrega em todo Brasil" width="355" height="130" />
+								<h3>2. Entrega na sua casa</h3>
+								<p>O seu clube de assinatura de cervejas é entregue no conforto da sua casa. Aí é só gelar e degustar!</p>
+							</li>
+
+							<li class="maisvantagens">
+								<img src="/arquivos/cb-clube-03.png" title="Vantagens clube de cervejas" alt="Vantagens clube de cervejas" width="355" height="130" />
+								<h3>3. Mais vantagens</h3>
+								<p>Sendo assinante do clube de cervejas 'Cerveja Box' ou 'Cerveja Box estilos' você tem vários benefícios exclusivos!</p>
+							</li>
+						</ul>
+					</section>
+
+					<section class="beneficios beneficios-desktop-CRO">
+						<h2 class="titulo"><span>Benefícios Clube Da Cerveja</span></h2>
+
+						<ul>
+							<li class="frete">
+								<img src="/arquivos/cervejabox-clube-frete.png" title="Frete Grátis clube de cervejas" alt="Frete Grátis clube de cervejas" width="90" height="90" />
+								<div class="wrap">
+									<h3>Frete Prime</h3>
+									<p>Você pode ter <strong>FRETE GRÁTIS</strong> nas suas compras avulsas escolhendo receber suas cervejas com o clube do mês seguinte.</p>
+								</div>
+							</li>
+
+							<li class="conteudo">
+								<img src="/arquivos/cervejabox-clube-conteudo.png" title="Dicas harmonização clube de cervejas" alt="Dicas harmonização clube de cervejas" width="90" height="90" />
+								<div class="wrap">
+									<h3>Conteúdo informatívo</h3>
+									<p>Folheto informativo sobre as cervejas e dicas de degustação e harmonização.</p>
+								</div>
+							</li>
+
+							<li class="promocoes">
+								<img src="/arquivos/cervejabox-clube-promocoes.png" title="Benefícios clube de cervejas" alt="Benefícios clube de cervejas" width="90" height="90" />
+								<div class="wrap">
+									<!--<h3>Promoções exclusívas</h3>
+										<p>Você tem descontos exclusivos em toda a loja, que podem chegar até 50% de desconto.</p>-->
+									<h3>Descontos e Promoções</h3>
+									<p>Sócios do clube de cervejas tem 10% de desconto em todos produtos da loja e ofertas especiais que podem chegar a até 50% OFF.</p>
+								</div>
+							</li>
+						</ul>
+
+						<button class="bt assine">Assine o clube</button>
+
+					</section>
+					<section class="beneficios beneficios-mobile-CRO">
+						<h2 class="titulo"><span>Benefícios Clube Da Cerveja</span></h2>
+
+						<ul class="cassousel-beneficios">
+							<li class="frete">
+								<img src="/arquivos/cervejabox-clube-frete.png" title="Frete Grátis clube de cervejas" alt="Frete Grátis clube de cervejas" width="90" height="90" />
+								<div class="wrap">
+									<h3>Frete Prime</h3>
+									<p>Você pode ter <strong>FRETE GRÁTIS</strong> nas suas compras avulsas escolhendo receber suas cervejas com o clube do mês seguinte.</p>
+								</div>
+							</li>
+
+							<li class="conteudo">
+								<img src="/arquivos/cervejabox-clube-conteudo.png" title="Dicas harmonização clube de cervejas" alt="Dicas harmonização clube de cervejas" width="90" height="90" />
+								<div class="wrap">
+									<h3>Conteúdo informatívo</h3>
+									<p>Folheto informativo sobre as cervejas e dicas de degustação e harmonização.</p>
+								</div>
+							</li>
+
+							<li class="promocoes">
+								<img src="/arquivos/cervejabox-clube-promocoes.png" title="Benefícios clube de cervejas" alt="Benefícios clube de cervejas" width="90" height="90" />
+								<div class="wrap">
+									<!--<h3>Promoções exclusívas</h3>
+										<p>Você tem descontos exclusivos em toda a loja, que podem chegar até 50% de desconto.</p>-->
+									<h3>Descontos e Promoções</h3>
+									<p>Sócios do clube de cervejas tem 10% de desconto em todos produtos da loja e ofertas especiais que podem chegar a até 50% OFF.</p>
+								</div>
+							</li>
+						</ul>
+
+						<button class="bt assine">Assine o clube</button>
+
+					</section>
+				</div><!-- FIM tpl-center -->
+
+				<section class="descubraPlano">
+                    <h2 class="titulo">Descubra a assinatura de cervejas ideal para você</h2>
+					<div class="tpl-center">
+						<div class="bts">
+						    <div class="clube01-cro">
+						        <h4>Clube CervejaBox Explorador:</h4>
+							    <button class="bt clube01">Conhecer</button>
+							</div>
+							<div class="clube02-cro">
+    							<h4>Clube CervejaBox Estilos:</h4>
+    							<button class="bt clube02">Conhecer</button>
+							</div>
+						</div>
+              
+						<div class="box fixo clube01">
+							<h3>Clube Cerveja Box Explorador</h3>
+
+							<div class="wrap">
+								<p>Uma seleção variada e completa para aqueles que querem aprender e experimentar de tudo sobre o mundo das cervejas artesanais. Se desejar, você pode adicionar o plano de copos colecionáveis ao seu clube de cervejas.</p>
+
+								<div class="garrafas js--lazyload has--lazyload" data-noscript="">
+									<noscript>
+										<vtex:contentPlaceHolder id="cervejabox-clube01" />
+									</noscript>
+								</div>
+							</div>
+
+							<div class="preco">
+								<strong>Plano Mensal</strong>
+								<span>A partir de</span>
+								<div class="valorPor"></div>
+
+								<button class="bt saibamais">Saiba mais</button>
+							</div>
+						</div><!-- fim clube01 -->
+
+						<div class="box fixo clube02">
+							<h3>Clube Cervejabox Estilos</h3>
+
+							<div class="wrap">
+								<p>No Clube CervejaBox estilos você monta o seu plano, escolhendo os estilos e as quantidades que quer receber. Se desejar, você pode adicionar o plano de copos colecionáveis ao seu clube de cervejas.</p>
+
+								<div class="garrafas js--lazyload has--lazyload" data-noscript="">
+									<noscript>
+										<vtex:contentPlaceHolder id="cervejabox-clube02" />
+									</noscript>
+								</div>
+							</div>
+
+							<div class="preco">
+								<strong>Plano Mensal</strong>
+								<span>A partir de</span>
+								<div class="valorPor"></div>
+
+								<button class="bt saibamais">Saiba mais</button>
+							</div>
+						</div><!-- fim clube02 -->
+
+						<div class="box clube01 lightbox">
+							<h3>Clube CervejaBox</h3>
+
+							<div class="top">
+								<div class="left"></div>
+								<div class="right"></div>
+							</div>
+
+							<div class="garrafasVisiveis">
+								<span>Você receberá as cervejas visíveis abaixo</span>
+
+								<div class="garrafas">
+									<vtex:contentPlaceHolder id="cervejabox-clube01-selecaomes" />
+
+									<vtex:contentPlaceHolder id="cervejabox-copo" />
+								</div>
+							</div>
+
+							<div class="mensal">
+								<div class="preco">
+									<strong>Plano Mensal</strong>
+									<div class="valorPor CB-teste-mes-unico"></div>
+									<div class="parcelado">Cobrança automática todo dia 05 no cartão de crédito</div>
+
+									<button class="bt assinarMensal">Assinar plano mensal</button>
+								</div>
+
+								<div class="linha"></div>
+							</div>
+						</div><!-- fim lightbox clube01 -->
+
+						<div class="box clube02 lightbox">
+							<h3>Clube CervejaBox Estilos</h3>
+
+							<div class="top">
+								<div class="left"></div>
+								<div class="right"></div>
+							</div>
+
+							<div class="garrafasVisiveis">
+								<span>Selecione os estilos e a quantidade<br /> a receber do estilo</span>
+
+								<p>Você receberá as cervejas visíveis abaixo</p>
+
+								<div class="garrafas">
+									<vtex:contentPlaceHolder id="cervejabox-clube02-selecaomes" />
+
+									<vtex:contentPlaceHolder id="cervejabox-copo-estilos" />
+
+									<div class="mensagem"></div>
+								</div>
+							</div>
+
+							<div class="mensal">
+								<div class="preco">
+									<strong>Plano Mensal</strong>
+									<div class="valorPor"></div>
+									<div class="parcelado">Cobrança automática todo dia 05 no cartão de crédito</div>
+
+									<button class="bt assinarMensal">Assinar plano mensal</button>
+								</div>
+
+								<div class="linha"></div>
+							</div>
+						</div><!-- fim lightbox clube02 -->
+					</div>
+				</section>
+				
+				<section class="depoimento-desktop">
+					<vtex.cmc:depoimentoClubeDesk />
+				</section>
+				<section class="depoimento-mobile">
+					<vtex.cmc:depoimentoClubeMobile />
+				</section>
+
+				<section id="selecaoDoMes" class="selecao selecaoDoMes-cro-desktop">
+					<div class="tpl-center">
+						<div class="titulos">
+						    <h2>Seleção do Mês</h2>
+							<button class="bt selecaoAnterior">Ver meses anteriores</button>
+						</div>
+
+						<vtex:contentPlaceHolder id="selecaoDoMes" />
+
+						<button class="bt assine">Assine o clube</button>
+					</div>
+				</section>
+				<section id="selecaoDoMes" class="selecao selecaoDoMes-cro-mobile">
+					<div class="tpl-center">
+						<div class="titulos">
+						    <h2>Seleção do Mês</h2>
+							<button class="bt selecaoAnterior">Ver meses anteriores</button>
+						</div>
+
+						<div class="cb-slide-collection-vitrine">
+                            <vtex:contentPlaceHolder id="selecaoDoMesMobile" />
+                        </div>
+
+						<button class="bt assine">Assine o clube</button>
+					</div>
+				</section>
+
+				<section id="selecaoaAnterior" class="selecao">
+					<div class="tpl-center">
+						<div class="titulo">
+							<h2>BOX ANTERIORES</h2>
+						</div>
+
+						<vtex:contentPlaceHolder id="selecaoDoMesAnterior" />
+
+						<button class="bt assine">Assine o clube</button>
+					</div>
+				</section>
+
+				<section id="faqClube">
+					<vtex:contentPlaceHolder id="Texto FAQ" />
+				</section>
+
+			</div><!-- fim tpl-content -->
+
+		</main><!-- fim main -->
+
+		<!-- FOOTER -->
+		<vtex:template id="cervejabox-footer" />
+	</div><!-- fim tpl-wrapper -->
+
+	<div class="first-month-price hidden">
+		<vtex:contentPlaceHolder id="Preços Primeiro Mês" />
+	</div>
+
+	<a class="cb-chat-whatsapp-clube" href="https://wa.me/551149495001?text=Olá,%20estou%20na%20página%20do%20clube%20CervejaBox%20e%20gostaria%20de%20ajuda." target="_blank" alt="Alguma dúvida? Fale com a gente!" title="Alguma dúvida? Fale com a gente!">
+		<i class="fa fa-whatsapp"></i>
+		<span>8 as 17</span>
+	</a>
+
+	<!-- SCRIPTS -->
+	<vtex:template id="cervejabox-includes-scripts" />
+
+</body>
+
+<!-- Start Slick Slide -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- End Slick Slide -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha512-VHsNaV1C4XbgKSc2O0rZDmkUOhMKPg/rIi8abX9qTaVDzVJnrDGHFnLnCnuPmZ3cNi1nQJm+fzJtBbZU9yRCww==" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    var $ = $;
+
+    var codeFunctionsStore = {
+        sliderProductsHome: function() {
+            $('.cb-slide-collection-vitrine .cb-vitrine').addClass('swiper-container slider-container-vitrine-home');
+            $('.cb-slide-collection-vitrine .cb-vitrine ul').addClass('swiper-wrapper');
+            $('.cb-slide-collection-vitrine .cb-vitrine ul').each(function() {
+                $('.cb-slide-collection-vitrine .cb-vitrine ul li').addClass('swiper-slide');
+            });
+    
+            var swiper = new Swiper(".slider-container-vitrine-home", {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                pauseOnHover: false
+            });
+        },
+    
+        init: function() {
+            codeFunctionsStore.sliderProductsHome();
+        }
+    }
+    
+    $(document).ready(function() {
+        codeFunctionsStore.init();
+        
+        $('.cassousel-comoFunciona').slick({
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+        });
+        
+        $('.cassousel-beneficios').slick({
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+        });
+    });
+</script>
+</html>
