@@ -19,7 +19,7 @@ const btnWhats = () => {
         </div>
         `;
 
-        let bodyClass = document.querySelector('body')
+        let bodyClass = document.querySelector('#main')
         bodyClass.innerHTML += html
     }
 }
