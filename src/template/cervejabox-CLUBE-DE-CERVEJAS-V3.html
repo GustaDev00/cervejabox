@@ -189,13 +189,24 @@
         .cassousel-beneficios .slick-prev {
             left: 5px !important;
         }
-        .descubraPlano .tpl-center{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+        @media screen and (min-width: 1024px) {
+            .descubraPlano .tpl-center{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            body.clube-de-cervejas section.descubraPlano .box{
+                width: 100% !important;
+            }
+            body.clube-de-cervejas section.descubraPlano .box.clube02 .wrap .garrafas .box-banner a img{
+                width: 60px !important;
+            }
         }
-        body.clube-de-cervejas section.descubraPlano .box{
-            width: 100% !important;
-        }
+		.mesespermanencia{
+			font-family: Oswald,sans-serif;
+			margin-top: 10px;
+			font-weight: 300;
+			text-align: center;
+		}
     </style>
 </head>
 
@@ -433,6 +444,7 @@
 
 									<button class="bt assinarMensal">Assinar plano mensal</button>
 								</div>
+								<p class="mesespermanencia">PERMANÊNCIA MÍNIMA&nbsp;DE&nbsp;3&nbsp;MESES</p>
 
 								<div class="linha"></div>
 							</div>
@@ -468,6 +480,7 @@
 
 									<button class="bt assinarMensal">Assinar plano mensal</button>
 								</div>
+								<p class="mesespermanencia">PERMANÊNCIA MÍNIMA&nbsp;DE&nbsp;3&nbsp;MESES</p>
 
 								<div class="linha"></div>
 							</div>

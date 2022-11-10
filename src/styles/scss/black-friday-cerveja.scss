@@ -1,12 +1,9 @@
 body.black-friday-cerveja.home{
+    .nav-gwbar-single-rows{
+        display: none !important;
+    }
     #bloco-c{
         margin-bottom: 0px !important;
-    }
-    .font-size-16{
-        padding: 0 40px;
-        font-size: 18px;
-        text-align: center;
-        line-height: 30px;
     }
     #wapperBottomTriplo{
         .tpl-center{
