@@ -4,10 +4,8 @@ const Product = () => {
     methods: {
         pickSku: async function () {
             const packSku = await this.searchSku([vtxctx.skus]);
-            console.log(packSku[0].pack)
 
             const products = await this.searchSku(packSku[0].pack[0].split(','))
-            console.log('produto: ', products)
 
             if (!products.length) return
 
@@ -49,7 +47,6 @@ const Product = () => {
             })
         },
         wrtiteHtml: function (Allproduct) {
-            console.log('html: ', Allproduct)
             let htmlProduct = Allproduct.map(item => {
                 const withoutDiscount = item.items[0].sellers[0].commertialOffer.ListPrice;
                 const withDiscount = item.items[0].sellers[0].commertialOffer.Price;
@@ -150,8 +147,6 @@ const Product = () => {
                 </li>`
             });
 
-            console.log('html ss', htmlProduct)
-
             const html = `
             <section id="related" class="pack prateleira">
                 <h4 id="tituliPack" class="pack-title">Compre mais por menos</h4>
@@ -164,12 +159,9 @@ const Product = () => {
             return html
         },
         searchSku: async function (ids) {
-            console.log(ids)
             if (!ids.length) return
 
             const searchSku = ids.join('&fq=skuId:')
-
-            console.log('searh> ', searchSku)
             let result = await fetch(`/api/catalog_system/pub/products/search/?fq=skuId:${searchSku}`, { method: 'GET' })
                 .then(response => { return response.json() })
                 .catch(err => console.error(err));

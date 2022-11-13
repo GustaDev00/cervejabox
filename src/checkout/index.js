@@ -168,7 +168,6 @@ function escondeBoleto() {
           
           setTimeout(function () {
             document.querySelectorAll(".cart-totalizers").forEach(function (element) {
-              console.log('freteAnual')
               console.log(element.querySelector(".Shipping td.monetary").textContent)
               element.querySelector(".Shipping td.monetary").innerHTML+='<small class="frete-warning">valor anual</small>';
             });
