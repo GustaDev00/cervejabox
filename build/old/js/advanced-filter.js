@@ -78,7 +78,6 @@
                     methods.preparaBoxImage();
                     methods.preparaBoxRange();
                 }else{
-                    console.log('O menu "'+options.menu+'" nÃ£o existe!');
                 }
             },
             criaEstrutura : function(){
@@ -142,7 +141,6 @@
             preparaBoxRange : function(){
 
                 if( !$.fn.ionRangeSlider ){
-                    console.log('Para habilitar a opÃ§Ã£o RANGE Ã© necessario inserir o plugin Range.Slider - http://www.jqueryrain.com/');
                     return false;
                 }
                 var aux = 0;
