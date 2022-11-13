@@ -43,7 +43,7 @@ header .nav-gwbar-single-row .margin-rgt {
     }
   }
   .nav-gwbar-single-rows {
-    display : flex;
+    display : none;
     align-content : center;
     justify-content : center;
     width : 100%;

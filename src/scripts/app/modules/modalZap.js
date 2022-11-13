@@ -1,4 +1,5 @@
 const ModalZap = () => {
+    console.log('1aqui dentro')
     window.onload = () => {
         document.onmouseleave = function () {
             if (!localStorage.getItem("modalZap")) {

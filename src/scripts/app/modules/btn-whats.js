@@ -1,5 +1,4 @@
 const btnWhats = () => {
-    window.onload = ()=>{
         const html = `
         <div class="btns-whats-telegram">
         <figure>
@@ -19,9 +18,8 @@ const btnWhats = () => {
         </div>
         `;
 
-        let bodyClass = document.querySelector('#main')
+        let bodyClass = document.querySelector('footer#footer')
         bodyClass.innerHTML += html
-    }
 }
 
 export default btnWhats
