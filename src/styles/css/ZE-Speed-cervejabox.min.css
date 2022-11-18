@@ -2384,7 +2384,8 @@ body #newsPop .content .wrapper .wrap {
 
 body #newsPop .content .wrapper .wrap .titulo {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center;
 }
 
 body #newsPop .content .wrapper .wrap .titulo img {
@@ -4454,12 +4455,17 @@ body.promocao main .tpl-content .tpl-center .wrapperRight .main .prateleira ul>l
     background-color: #d0a14c;
     color: #fff
 }
-
+body.promocao #newsPop .content .wrapper .wrap .titulo .text{
+    display: flex;
+    align-items: center;
+}
 body.promocao #newsPop .content .wrapper .wrap p {
-    font-size: 0
+    font-size: 0;
+    width: 300px;
+    margin-top: 25px;
 }
 
-body.promocao #newsPop .content .wrapper .wrap p:first-child:before {
+body.promocao #newsPop .content .wrapper .wrap .titulo p:first-child:before {
     content: "Para ver nossas ofertas exclusivas é necessário compartilhar seu email conosco.";
     font-size: 14px;
     line-height: 14px
