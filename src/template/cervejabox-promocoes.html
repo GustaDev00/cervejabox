@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html
+  class="no-js"
+  lang="pt-br"
+  xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+>
+  <head>
+    <!--Metatags-->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <vtex:contentPlaceHolder id="metaTags" />
+    <meta
+      name="Abstract"
+      content="Clube de Cervejas Especiais Por Assinatura"
+    />
+    <meta name="author" content="CervejaBox" />
+    <meta name="copyright" content="CervejaBox" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!--Metatags-->
+    <vtex:template id="cervejabox-includes-header-seo" />
+  </head>
+
+  <body>
+    <!-- MENU cervejabox -->
+    <vtex:template id="cervejabox-menumobile" />
+    <h1 class="hidden"><vtex:contentPlaceHolder id="TAG H1" /></h1>
+
+    <div class="tpl-wrapper">
+      <!-- HEADER -->
+      <vtex:template id="cervejabox-header" />
+
+      <!-- MAIN -->
+      <main id="main">
+        <div class="tpl-content">
+          <div class="tpl-center">
+            <vtex:contentPlaceHolder id="cervejabox-bannerPROMOCAO" />
+
+            <br />
+            <div class="sidebar">
+              <div class="wrapperFiltros">
+                <div class="top">
+                  <h3>Filtros</h3>
+                  <button class="close">x</button>
+                </div>
+
+                <div class="titulo">
+                  <strong>Navegue pelos filtros</strong>
+                </div>
+
+                <vtex.cmc:searchNavigator />
+              </div>
+
+              <div class="overlay"><button></button></div>
+            </div>
+            <!-- FIM Sidebar -->
+
+            <div class="wrapperRight">
+              <div class="titulo"><h2>PROMOÇÕES</h2></div>
+
+              <vtex.cmc:searchResult
+                layout="15285295-d154-4ad0-a853-7fec8bb23b38"
+                itemCount="24"
+                columnCount="24"
+              />
+            </div>
+            <!-- FIM wrapperRight -->
+          </div>
+
+          <vtex:template id="cervejabox-wrapperBottomTriplo" />
+        </div>
+        <!-- fim tpl-content -->
+      </main>
+      <!-- fim main -->
+
+      <!-- FOOTER -->
+      <vtex:template id="cervejabox-footer" />
+    </div>
+    <!-- fim tpl-wrapper -->
+
+    <!-- SCRIPTS -->
+    <vtex:template id="cervejabox-includes-scripts" />
+  </body>
+</html>
