@@ -1,0 +1,27 @@
+body.internasComum main .tpl-content .tpl-center .sidebar .wrapperFiltros .menu-departamento .bt-refinar, body.internasComum main .tpl-content .tpl-center .sidebar .wrapperFiltros .menu-departamento .menu-navegue, body.internasComum main .tpl-content .tpl-center .sidebar .wrapperFiltros .menu-departamento .search-single-navigator{
+    display: block !important;
+}
+
+
+.wrapperFiltros{
+    .navigation{
+        .menu-departamento{
+            .search-single-navigator{
+                h3{
+                    font-size: 18px !important;
+                    margin: 10px 0;
+                }
+                ul{
+                    margin-bottom: 30px;
+                    li{
+                        margin: 10px 0;
+                        a{
+                            font-size: 16px;
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
