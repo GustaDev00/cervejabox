@@ -167,10 +167,26 @@ const Product = () => {
                 .catch(err => console.error(err));
 
             return result
+        },
+        openMiniCart: async function(){
+          $(window).on('orderFormUpdated.vtex', function(evt, orderForm) {
+            if(orderForm.items.length > 0){
+              const body = document.querySelector('body.produto')
+              if(!body) return
+
+              body.classList.add('openMinicart')
+            }else{
+              const body = document.querySelector('body.produto')
+              if(!body) return
+
+              body.classList.remove('openMinicart')
+            }
+          });
         }
     },
     init: function () {
         this.methods.pickSku();
+        this.methods.openMiniCart();
     }
 }
 

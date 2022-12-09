@@ -37,37 +37,58 @@ body.produto {
     }
 }
 
-body.produto.openMinicart{
-    @media (min-width: 1025px) {
-        display: flex !important;
-        .tpl-center{
-            width: unset !important;
-        }
-        header .stpl-header .bottom>.tpl-center{
-            padding: 0px 10px;
-        }
-        div.tpl-wrapper{
-            width: 100% !important;
-        }
-        .sta-cart-container{
-            position: sticky !important;
-            display: block !important;
-            width: 25% !important;
-            height: 100vh !important;
-        }
-        .sta-cart-overlay{
-            display: none !important;
-        }
-        .icones{
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row-reverse;
-            .minhaconta{
-                margin-right: 0px !important;
-            }
-            span{
-                font-size: 14px !important;
-            }
-        }
-    }
-}
+// @media (min-width: 1025px) {
+//     body.produto.openMinicart {
+//         display: flex !important;
+
+//         .tpl-center {
+//             width: unset !important;
+//         }
+
+//         header .stpl-header .bottom>.tpl-center {
+//             padding: 0px 10px;
+//         }
+
+//         header .stpl-header .middle {
+//             padding: 0 10px;
+//         }
+
+//         div.tpl-wrapper {
+//             width: 100% !important;
+//         }
+
+//         .sta-cart-container {
+//             position: sticky !important;
+//             display: block !important;
+//             width: 15% !important;
+//             height: 100vh !important;
+//         }
+
+//         .sta-cart-items {
+//             padding: 0px !important;
+//         }
+
+//         .sta-cart-overlay {
+//             display: none !important;
+//         }
+
+//         .icones {
+//             display: flex;
+//             justify-content: space-between;
+//             flex-direction: row-reverse;
+
+//             .minhaconta {
+//                 margin-right: 0px !important;
+//             }
+
+//             span {
+//                 font-size: 14px !important;
+//             }
+//         }
+//     }
+//     body.produto.fixed-header.openMinicart {
+//         header {
+//             width: 87% !important;
+//         }
+//     }
+// }
