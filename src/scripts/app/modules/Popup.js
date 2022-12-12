@@ -1,8 +1,8 @@
 const Popup = () => {
 
     //Só descomentar a linha da variavel que deseja utilizar, removendo os tracinhos em frente e colocando na que não ira utilizar
-
-    const min = 60000; //Variavel setado 1 min
+    const min = document.querySelector('body.clube-de-cervejas').className.toLowerCase().includes("cervejascro-v3")? 60000 : 120000;
+    // const min = 60000; //Variavel setado 1 min
     // const min = 120000; // variavel setado 2 min
 
     const ModalFunction = {
