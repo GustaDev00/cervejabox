@@ -8,7 +8,7 @@ const btnWhats = () => {
         <figcaption class="version_a">grupo de ofertas</figcaption>
         </figure>
         <div class="btns-click">
-        <a href="https://chat.whatsapp.com/ITCCLqG9wofDETz2ivDSp1" target="_blank" rel="nofollow">
+        <a href="https://chat.whatsapp.com/I18sPj4vMYDEAHIl6FxQm3" target="_blank" rel="nofollow">
         <img src="https://cervejabox.vteximg.com.br/arquivos/bot%C3%A3o-whatsapp.png" alt="btn-whats"/>
         </a>
         <a href="https://t.me/+ixH2y2_e2e43ZDgx" target="_blank" rel="nofollow">

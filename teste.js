@@ -58,7 +58,7 @@ window.onload = () => {
                 document.querySelector(".modalZap").remove();
             });
             openZap.addEventListener("click", () => {
-                window.location = "https://chat.whatsapp.com/ITCCLqG9wofDETz2ivDSp1";
+                window.location = "https://chat.whatsapp.com/I18sPj4vMYDEAHIl6FxQm3";
             });
             openTelegram.addEventListener("click", () => {
                 window.location = "https://t.me/+ixH2y2_e2e43ZDgx";
