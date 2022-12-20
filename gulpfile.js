@@ -20,6 +20,8 @@ const clean = require('gulp-clean') //Deleta diretorios ou arquivos
 const tsify = require('tsify')
 const config = {
     nickName: 'cervejabox',
+    accountName: 'cervejabox',
+	https: true
 }
 const paths = {
     dist: {
@@ -43,6 +45,34 @@ const paths = {
         src: './src/scripts/old/*.js'
     }
 }
+
+const { createProxyMiddleware } = require('http-proxy-middleware')
+const apiProxy = createProxyMiddleware('/', {
+	target: 'https://' + config.accountName + '.vtexcommercestable.com.br',
+	cookieDomainRewrite: config.accountName + '.vtexlocal.com.br',
+	changeOrigin: true,
+	autoRewrite: true,
+	logLevel: 'silent'
+})
+
+gulp.task('browserSyncProxy', function () {
+	return browserSync.init({
+		open: false,
+		ui: false,
+		watch: true,
+		https: config.https || true,
+		host: config.accountName + '.vtexlocal.com.br',
+		startPath: '/admin/login/',
+		proxy: 'https://' + config.accountName + '.vtexcommercestable.com.br',
+		middleware: [apiProxy],
+		serveStatic: [
+			{
+				route: '/arquivos',
+				dir: ['./build/arquivos']
+			}
+		]
+	})
+})
 
 gulp.task('default', function () {
     return gulp.src('./build', { read: false })
