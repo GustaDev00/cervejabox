@@ -46,11 +46,10 @@
             }
         }
     }
-    display: none;
 }
 
 @media (min-width: 1024px) {
     body .btns-whats-telegram {
-        display: none !important;
+        display: none;
     }
 }

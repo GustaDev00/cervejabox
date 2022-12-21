@@ -140,6 +140,6 @@ const watchDev = () => {
 }
 gulp.task(
     'dev',
-    gulp.parallel('style-sass', 'script', 'style-cssold', 'scriptOld', watchDev)
+    gulp.parallel('browserSyncProxy', 'style-sass', 'script', 'style-cssold', 'scriptOld', watchDev)
 )
 gulp.task('build', gulp.parallel('style-sass', 'script', 'style-cssold', 'scriptOld'))
