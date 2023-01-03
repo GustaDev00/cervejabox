@@ -6,17 +6,17 @@
     width: 100%;
     z-index: 999;
 
-    figure{
+    figure {
         position: relative;
         height: 70px;
         overflow: hidden;
-        img{
+        img {
             width: 100%;
             @media (min-width: 700px) {
                 width: fit-content;
             }
         }
-        figcaption{
+        figcaption {
             position: absolute;
             top: 30px;
             width: 100%;
@@ -24,7 +24,7 @@
             text-transform: uppercase;
             font-size: 28px;
 
-            &.version_b{
+            &.version_b {
                 display: none;
             }
         }
