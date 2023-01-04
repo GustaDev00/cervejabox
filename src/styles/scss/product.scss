@@ -1,7 +1,7 @@
 body.produto {
     main {
         .tpl-content {
-            >div.tpl-center {
+            > div.tpl-center {
                 display: flex;
                 flex-direction: column;
 
@@ -45,7 +45,7 @@ body.produto {
 //             width: unset !important;
 //         }
 
-//         header .stpl-header .bottom>.tpl-center {
+//         header .stpl-header .bottom > .tpl-center {
 //             padding: 0px 10px;
 //         }
 
@@ -55,6 +55,7 @@ body.produto {
 
 //         div.tpl-wrapper {
 //             width: 100% !important;
+//             padding: 0px 20px;
 //         }
 
 //         .sta-cart-container {
@@ -62,6 +63,7 @@ body.produto {
 //             display: block !important;
 //             width: 15% !important;
 //             height: 100vh !important;
+//             border-left: 1px solid #a9a8a8;
 //         }
 
 //         .sta-cart-items {

@@ -1,6 +1,6 @@
 {
   "name": "cervejabox",
-  "version": "3.2.0",
+  "version": "3.3.1",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
@@ -53,7 +53,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-replace-name": "^1.0.1",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^1.2.0",
     "gulp-webp": "^4.0.1",
     "http-proxy-middleware": "^2.0.6",

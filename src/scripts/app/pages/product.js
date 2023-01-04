@@ -1,79 +1,96 @@
 const Product = () => {
-
   const pageProduct = {
     methods: {
-        pickSku: async function () {
-            const packSku = await this.searchSku([vtxctx.skus]);
+      pickSku: async function () {
+        const packSku = await this.searchSku([vtxctx.skus]);
 
-            const products = await this.searchSku(packSku[0].pack[0].split(','))
+        const products = await this.searchSku(packSku[0].pack[0].split(","));
 
-            if (!products.length) return
+        if (!products.length) return;
 
-            const sectionsPage = document.querySelector('#react-compre-id');
-            sectionsPage.innerHTML += this.wrtiteHtml(products);
-            this.carrossel();
-
-        },
-        carrossel: function () {
-            $('.pack-list').slick({
-                infinite: !0,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                dots: !0,
-                arrows: !0,
-                responsive: [
-                    {
-                        breakpoint: 920,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3
-                        }
-                    },
-                    {
-                        breakpoint: 720,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            })
-        },
-        wrtiteHtml: function (Allproduct) {
-            let htmlProduct = Allproduct.map(item => {
-                const withoutDiscount = item.items[0].sellers[0].commertialOffer.ListPrice;
-                const withDiscount = item.items[0].sellers[0].commertialOffer.Price;
-                const existDiscount = withoutDiscount > withDiscount ? true : false;
-                const quantityDiscount = existDiscount && 100 - ((withDiscount * 100) / withoutDiscount)
-                return `
+        const sectionsPage = document.querySelector("#react-compre-id");
+        sectionsPage.innerHTML += this.wrtiteHtml(products);
+        this.carrossel();
+      },
+      carrossel: function () {
+        $(".pack-list").slick({
+          infinite: !0,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          dots: !0,
+          arrows: !0,
+          responsive: [
+            {
+              breakpoint: 920,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              },
+            },
+            {
+              breakpoint: 720,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      },
+      wrtiteHtml: function (Allproduct) {
+        let htmlProduct = Allproduct.map((item) => {
+          const withoutDiscount =
+            item.items[0].sellers[0].commertialOffer.ListPrice;
+          const withDiscount = item.items[0].sellers[0].commertialOffer.Price;
+          const existDiscount = withoutDiscount > withDiscount ? true : false;
+          const quantityDiscount =
+            existDiscount && 100 - (withDiscount * 100) / withoutDiscount;
+          return `
                 <li class="todos-os-estilos-de-cerveja-artesanal-para-comprar-online fields">
 
                 <div class="shelf-wrapper">
-                  <div class="idSku" style="display: none;">${item.productId}</div>
-                  <div class="productId" style="display: none;">${item.productId}</div>
+                  <div class="idSku" style="display: none;">${
+                    item.productId
+                  }</div>
+                  <div class="productId" style="display: none;">${
+                    item.productId
+                  }</div>
                   <div class="categoryName" style="display: none;">Packs</div>
-                  <div class="bestPrice" style="display: none;">R$ ${item.items[0].sellers[0].commertialOffer.Price}</div>
+                  <div class="bestPrice" style="display: none;">R$ ${
+                    item.items[0].sellers[0].commertialOffer.Price
+                  }</div>
                 
                   <!-- Foto do produto -->
                   <div class="photo">
-                    <a title="Pack 4 cervejas Schornstein IPA 500ml" href="${item.link}" tabindex="0">
-                      <div class="shelf-image-container has--lazyload is--lazyloaded" data-noscript=""><img src="${item.items[0].images[0].imageUrl}" width="300" height="300" alt="${item.items[0].images[0].imageText}" id=""></div>
+                    <a title="Pack 4 cervejas Schornstein IPA 500ml" href="${
+                      item.link
+                    }" tabindex="0">
+                      <div class="shelf-image-container has--lazyload is--lazyloaded" data-noscript=""><img src="${
+                        item.items[0].images[0].imageUrl
+                      }" width="300" height="300" alt="${
+            item.items[0].images[0].imageText
+          }" id=""></div>
                     </a>
                 
                     <!-- Flags -->
                     <div rel="${item.productId}" class="flags">
                       
                       <p class="flag independencia">independência</p>
-                        ${existDiscount && `
-                            <div class="descontoDePor" style="display: block;"><div><strong class="porcent">- ${Math.round(quantityDiscount)}%</strong></div></div>
-                        `}
+                        ${
+                          existDiscount &&
+                          `
+                            <div class="descontoDePor" style="display: block;"><div><strong class="porcent">- ${Math.round(
+                              quantityDiscount
+                            )}%</strong></div></div>
+                        `
+                        }
                       <div class="flag RateBeer"></div>
                       <div class="flag Validade"><div class="product-field product_field_51 product-field-type_1">
                 ${item["Validade menor 45 dias"]}
@@ -86,7 +103,9 @@ const Product = () => {
                   </div>
                 
                   <div class="wrapperConteudo">
-                    <a title="${item.productName}" href="${item.link}" tabindex="0">
+                    <a title="${item.productName}" href="${
+            item.link
+          }" tabindex="0">
                       <div class="product-name">${item.productName}</div>
                       <div class="fields">
                         <div class="field origem"><div class="product-field product_field_54 product-field-type_7">
@@ -113,12 +132,16 @@ const Product = () => {
                         <div class="boxWrapPreceComprar">
                       <a class="wrapperPreco" title="Pack 4 cervejas Schornstein IPA 500ml" href="https://www.cervejabox.com.br/pack-4-cervejas-artesanal-schornstein-ipa-500ml/p" tabindex="0">
                         <p class="preco">
-                        ${existDiscount ? `
+                        ${
+                          existDiscount
+                            ? `
                             <span class="valor-de"><strong>R$ ${withoutDiscount}</strong></span>
                             <span class="valor-por"><strong>R$ ${withDiscount}</strong></span>
-                        `: `
+                        `
+                            : `
                             <span class="valor-por"><strong>R$ ${withDiscount}</strong></span>
-                        `}
+                        `
+                        }
                         </p>
                       </a>
                       <div class="wrapperCompra">
@@ -144,53 +167,65 @@ const Product = () => {
                     </div>
                       </div>
                 </div>
-                </li>`
-            });
+                </li>`;
+        });
 
-            const html = `
+        const html = `
             <section id="related" class="pack prateleira">
                 <h4 id="tituliPack" class="pack-title">Compre mais por menos</h4>
                 <ul class="pack-list">
-                    ${htmlProduct.join('')}
+                    ${htmlProduct.join("")}
                 </ul>
             </section>
-            `
+            `;
 
-            return html
-        },
-        searchSku: async function (ids) {
-            if (!ids.length) return
+        return html;
+      },
+      searchSku: async function (ids) {
+        if (!ids.length) return;
 
-            const searchSku = ids.join('&fq=skuId:')
-            let result = await fetch(`/api/catalog_system/pub/products/search/?fq=skuId:${searchSku}`, { method: 'GET' })
-                .then(response => { return response.json() })
-                .catch(err => console.error(err));
+        const searchSku = ids.join("&fq=skuId:");
+        let result = await fetch(
+          `/api/catalog_system/pub/products/search/?fq=skuId:${searchSku}`,
+          { method: "GET" }
+        )
+          .then((response) => {
+            return response.json();
+          })
+          .catch((err) => console.error(err));
 
-            return result
-        },
-        openMiniCart: async function(){
-          $(window).on('orderFormUpdated.vtex', function(evt, orderForm) {
-            if(orderForm.items.length > 0){
-              const body = document.querySelector('body.produto')
-              if(!body) return
+        return result;
+      },
+      openMiniCart: async function () {
+        $(window).on("orderFormUpdated.vtex", function (evt, orderForm) {
+          if (orderForm.items.length > 0) {
+            const body = document.querySelector("body.produto");
+            if (!body) return;
 
-              body.classList.add('openMinicart')
-            }else{
-              const body = document.querySelector('body.produto')
-              if(!body) return
+            const urlAtual = window?.location?.href;
+            if (
+              urlAtual.includes("kit-4-cervejas-especiais-samsung-pay") ||
+              urlAtual.includes("kit-cervejas-importadas-samsung-pay")
+            )
+              return;
 
-              body.classList.remove('openMinicart')
-            }
-          });
-        }
+            body.classList.add("openMinicart");
+          } else {
+            const body = document.querySelector("body.produto");
+            if (!body) return;
+
+            body.classList.remove("openMinicart");
+          }
+        });
+      },
     },
     init: function () {
-        this.methods.pickSku();
-        this.methods.openMiniCart();
-    }
-}
+      this.methods.pickSku();
+      this.methods.openMiniCart();
+    },
+  };
 
-pageProduct.init()
-}
+  pageProduct.init();
+};
 
-export default Product
+export default Product;
