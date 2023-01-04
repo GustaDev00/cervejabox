@@ -37,60 +37,60 @@ body.produto {
     }
 }
 
-// @media (min-width: 1025px) {
-//     body.produto.openMinicart {
-//         display: flex !important;
+@media (min-width: 1025px) {
+    body.produto.openMinicart {
+        display: flex !important;
 
-//         .tpl-center {
-//             width: unset !important;
-//         }
+        .tpl-center {
+            width: unset !important;
+        }
 
-//         header .stpl-header .bottom > .tpl-center {
-//             padding: 0px 10px;
-//         }
+        header .stpl-header .bottom > .tpl-center {
+            padding: 0px 10px;
+        }
 
-//         header .stpl-header .middle {
-//             padding: 0 10px;
-//         }
+        header .stpl-header .middle {
+            padding: 0 10px;
+        }
 
-//         div.tpl-wrapper {
-//             width: 100% !important;
-//             padding: 0px 20px;
-//         }
+        div.tpl-wrapper {
+            width: 100% !important;
+            padding: 0px 20px;
+        }
 
-//         .sta-cart-container {
-//             position: sticky !important;
-//             display: block !important;
-//             width: 15% !important;
-//             height: 100vh !important;
-//             border-left: 1px solid #a9a8a8;
-//         }
+        .sta-cart-container {
+            position: sticky !important;
+            display: block !important;
+            width: 15% !important;
+            height: 100vh !important;
+            border-left: 1px solid #a9a8a8;
+        }
 
-//         .sta-cart-items {
-//             padding: 0px !important;
-//         }
+        .sta-cart-items {
+            padding: 0px !important;
+        }
 
-//         .sta-cart-overlay {
-//             display: none !important;
-//         }
+        .sta-cart-overlay {
+            display: none !important;
+        }
 
-//         .icones {
-//             display: flex;
-//             justify-content: space-between;
-//             flex-direction: row-reverse;
+        .icones {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
 
-//             .minhaconta {
-//                 margin-right: 0px !important;
-//             }
+            .minhaconta {
+                margin-right: 0px !important;
+            }
 
-//             span {
-//                 font-size: 14px !important;
-//             }
-//         }
-//     }
-//     body.produto.fixed-header.openMinicart {
-//         header {
-//             width: 87% !important;
-//         }
-//     }
-// }
+            span {
+                font-size: 14px !important;
+            }
+        }
+    }
+    body.produto.fixed-header.openMinicart {
+        header {
+            width: 87% !important;
+        }
+    }
+}
