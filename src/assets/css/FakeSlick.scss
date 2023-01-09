@@ -1,0 +1,48 @@
+@media screen and (max-width: 1180px) {
+    .fakeslick {
+        position: relative;
+
+        ul {
+            display: flex;
+            position: relative;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+
+            &::-webkit-scrollbar {
+                width: 0px;
+                background: transparent;
+            }
+
+            li {
+                min-width: 270px;
+            }
+        }
+
+        .slick-new__prev,
+        .slick-new__next {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.12);
+            opacity: 0.9;
+            top: 230px;
+            z-index: 4;
+            transition: opacity 0.3s ease;
+
+            &.disabled {
+                opacity: 0.3;
+            }
+        }
+
+        .slick-new__prev {
+            background: url("~images/ico-seta-esquerda2.svg") no-repeat center #fff;
+            left: 0;
+        }
+
+        .slick-new__next {
+            background: url("~images/ico-seta-direita2.svg") no-repeat center #fff;
+            right: 0;
+        }
+    }
+}

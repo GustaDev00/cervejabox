@@ -1,0 +1,277 @@
+//* Container
+$max-width-container: 1366px !default;
+$min-width-container: 320px !default;
+
+//* Colors
+$color-first: #424242 !default;
+$color-second: #cf38ef !default;
+$color-third: #ff6d2c !default;
+$color-fourty: #febb0b !default;
+$color-fifth: #897e82 !default;
+$color-border: #e0e0e0 !default;
+$color-bg: #f2f2f2 !default;
+$color-error: #ff2c52 !default;
+
+//* Fonts
+$font-family-first: "Open Sans", sans-serif !global;
+$font-family-regular-first: 400 !global;
+$font-family-bold-first: 700 !global;
+$font-family-black-first: 900 !global;
+
+//* Placeholders
+%href-link {
+    color: $color-first;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:focus,
+    &:hover {
+        color: $color-second;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &:visited,
+    &:active {
+        outline: none;
+    }
+}
+
+%button {
+    box-sizing: border-box;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid $color-bg;
+    border-radius: 0 5px 5px 5px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-second;
+    line-height: 14px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:focus,
+    &:visited,
+    &:active {
+        outline: none;
+    }
+
+    &:hover {
+        border: 1px solid $color-second;
+        background: $color-second;
+        color: #fff;
+    }
+}
+
+%button-reset {
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    background: transparent;
+
+    &:focus {
+        background: none;
+        outline: none;
+    }
+}
+
+%button-color {
+    @extend %button;
+    background: $color-first;
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: $color-second;
+        color: #ffffff;
+    }
+}
+
+%button-cta {
+    @extend %button-color;
+}
+
+%button-normal {
+    @extend %button;
+    background: transparent;
+    color: #ababab;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: #e0e0e0;
+        color: #333333;
+    }
+}
+
+%button-cta {
+    @extend %button;
+    border-radius: 0;
+    background-color: #fff;
+    color: $color-second;
+    border: 1px solid $color-second;
+
+    span{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
+%is-hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+//* Mixins
+@mixin font-smoothing($aliasing: antialiased) {
+    @if $aliasing == antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    } @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+@mixin is-hidden() {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+@mixin is-invisible() {
+    visibility: hidden;
+}
+
+//? Dimensions
+@mixin width-percent($container, $width, $important: false) {
+    @if $important==false {
+        width: (($width * 100) / $container) * 1%;
+    } @else {
+        width: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin margin-percent(
+    $container,
+    $width-top,
+    $width-right,
+    $width-bottom,
+    $width-left,
+    $important: false
+) {
+    @if $important==false {
+        margin: ((($width-top * 100) / $container) * 1%)
+            ((($width-right * 100) / $container) * 1%)
+            ((($width-bottom * 100) / $container) * 1%)
+            ((($width-left * 100) / $container) * 1%);
+    } @else {
+        margin: ((($width-top * 100) / $container) * 1%)
+            ((($width-right * 100) / $container) * 1%)
+            ((($width-bottom * 100) / $container) * 1%)
+            ((($width-left * 100) / $container) * 1%) !important;
+    }
+}
+
+@mixin margin-right-percent($container, $width, $important: false) {
+    @if $important==false {
+        margin-right: (($width * 100) / $container) * 1%;
+    } @else {
+        margin-right: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin margin-left-percent($container, $width, $important: false) {
+    @if $important==false {
+        margin-left: (($width * 100) / $container) * 1%;
+    } @else {
+        margin-left: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin padding-right-percent($container, $width, $important: false) {
+    @if $important==false {
+        padding-right: (($width * 100) / $container) * 1%;
+    } @else {
+        padding-right: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin padding-left-percent($container, $width, $important: false) {
+    @if $important==false {
+        padding-left: (($width * 100) / $container) * 1%;
+    } @else {
+        padding-left: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin padding-bottom-percent($container, $width, $important: false) {
+    @if $important==false {
+        padding-bottom: (($width * 100) / $container) * 1%;
+    } @else {
+        padding-bottom: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin padding-percent($container, $width, $important: false) {
+    @if $important==false {
+        padding: (($width * 100) / $container) * 1%;
+    } @else {
+        padding: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin position-right-percent($container, $width, $important: false) {
+    @if $important==false {
+        right: (($width * 100) / $container) * 1%;
+    } @else {
+        right: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+@mixin position-left-percent($container, $width, $important: false) {
+    @if $important==false {
+        left: (($width * 100) / $container) * 1%;
+    } @else {
+        left: (($width * 100) / $container) * 1% !important;
+    }
+}
+
+//* Functions
+@function z-index($key1, $key2: null) {
+    $map: $z-indexes;
+    $found-index: null;
+    @if (map-has-key($map, $key1)) {
+        $found-index: index(map-keys($map), $key1);
+        @if ($key2) {
+            $map: map-get($map, $key1);
+            $found-index: index($map, $key2);
+        }
+    }
+    @return $found-index;
+}
+@function z($key1, $key2: null) {
+    @return z-index($key1, $key2);
+}
+
+$z-indexes: (
+    main: (
+        mainBannerNav,
+        headerFixed,
+        counterBanners
+    ),
+    modal: (),
+    header: (
+        topbar,
+        userInfo,
+        salesforce,
+        sidenav,
+        itemMenu
+    )
+);
