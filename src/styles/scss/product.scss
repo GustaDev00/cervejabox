@@ -39,6 +39,9 @@ body.produto {
 
 @media (min-width: 1025px) {
     body.produto.openMinicart {
+        .sta-cart-close {
+            display: none !important;
+        }
         display: flex !important;
 
         .tpl-center {

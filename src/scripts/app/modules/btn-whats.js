@@ -1,6 +1,7 @@
 const btnWhats = () => {
-        const html = `
+  const html = `
         <div class="btns-whats-telegram">
+        <button id="close-offer-group">X</button>
         <figure>
         <img src="https://cervejabox.vteximg.com.br/arquivos/fundo.png"
         alt="background">
@@ -18,8 +19,23 @@ const btnWhats = () => {
         </div>
         `;
 
-        let bodyClass = document.querySelector('footer#footer')
-        bodyClass.innerHTML += html
-}
+  let bodyClass = document.querySelector("footer#footer");
+  bodyClass.innerHTML += html;
 
-export default btnWhats
+  function removeBtnWhats() {
+    document.querySelector(".btns-whats-telegram").remove();
+  }
+
+  const closebtn = document.querySelector("#close-offer-group");
+  if (!closebtn) return;
+
+  closebtn.addEventListener("click", function (e) {
+    removeBtnWhats();
+  });
+
+  setTimeout(() => {
+    removeBtnWhats();
+  }, 30000);
+};
+
+export default btnWhats;
