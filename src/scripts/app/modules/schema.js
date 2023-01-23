@@ -26,7 +26,7 @@ const schema = async () => {
     "@type": "WebPage",
     headline: h1.innerHTML,
     url: urlAtual,
-    about: [{ "@type": "Organization", name: "Cervejaria Bierland" }],
+    about: [{ "@type": "Organization", name: h1.innerHTML }],
     mentions: mapProduct,
   };
 
