@@ -29,20 +29,20 @@ const paths = {
     },
     sass: {
         dest: './build/arquivos/',
-        src: './src/styles/scss/*.scss'
+        src: './src/**/*.scss'
     },
     cssold: {
         dest: './build/old/css/',
-        src: './src/styles/css/*.css'
+        src: './src/**/*.css'
     },
     scripts: {
         dest: './build/arquivos/',
         src: './src/scripts/app/index.js',
-        watch: './src/scripts/app/**/*.js'
+        watch: './src/store/pages/**/*.jsx'
     },
     scriptsOld: {
         dest: './build/old/js/',
-        src: './src/scripts/old/*.js'
+        src: './src/**/*.js'
     }
 }
 
@@ -126,11 +126,17 @@ gulp.task('scriptOld', function () {
 })
 
 const watchDev = () => {
+    const watcher = gulp.watch(['./src/store/pages/**/*.jsx']);
+
+watcher.on('change', function(path) {
+    browserSync.reload();
+});
+
     gulp.watch(paths.sass.src, gulp.series('style-sass')).on('change', () => {
         browserSync.notify('Reinjetando estilos...', 3000)
         browserSync.reload('*.css')
     })
-    gulp.watch(paths.scripts.watch, gulp.series('script')).on('change', browserSync.reload)
+    // gulp.watch(paths.scripts.watch).on('change', browserSync.reload)
 
     gulp.watch(paths.cssold.src, gulp.series('style-cssold')).on('change', () => {
         browserSync.notify('Reinjetando estilos...', 3000)
@@ -142,4 +148,6 @@ gulp.task(
     'dev',
     gulp.parallel('browserSyncProxy', 'style-sass', 'script', 'style-cssold', 'scriptOld', watchDev)
 )
+
+gulp.task('teste', gulp.parallel('browserSyncProxy', watchDev))
 gulp.task('build', gulp.parallel('style-sass', 'script', 'style-cssold', 'scriptOld'))

@@ -6,7 +6,7 @@ const autoprefixer = require("autoprefixer");
 
 const ROOT_DIR = path.resolve(__dirname, "../..");
 const STORE_DIR = path.resolve(ROOT_DIR, "src/store");
-const DIST_DIR = path.resolve(ROOT_DIR, "dist");
+const DIST_DIR = path.resolve(ROOT_DIR, "build/arquivos");
 
 const NAME_PROJECT = process.env.OUTPUT_NAME;
 

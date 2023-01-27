@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp dev",
+    "serve": "gulp browserSyncProxy",
     "build": "gulp default && gulp build",
     "dev": "cross-env OUTPUT_NAME=cervejabox-react NODE_ENV=development webpack --config ./config/store/webpack.config.dev.js --display-error-details --watch",
     "prod": "cross-env OUTPUT_NAME=cervejabox-react NODE_ENV=production webpack --config ./config/store/webpack.config.prod.js"
@@ -88,7 +89,6 @@
     "http-proxy-middleware": "^2.0.6",
     "jquery-zoom": "^1.7.21",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "prettier": "^2.2.1",
@@ -96,6 +96,7 @@
     "react-addons-update": "^15.6.2",
     "react-responsive": "^9.0.0-beta.4",
     "react-select": "^3.0.4",
+    "sass": "^1.57.1",
     "sass-loader": "^7.1.0",
     "slick-carousel": "^1.8.1",
     "style-loader": "0.23.1",
@@ -116,8 +117,8 @@
     "workbox-cli": "^4.3.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
     "@ClickQi/clickqi-apps-smart-filter": "git+https://git-clickqi:bfKGnknsGDkKdPu58sRp@bitbucket.org/ClickQI/clickqi-apps-smart-filter.git",
+    "@babel/polyfill": "^7.4.4",
     "@react-spring/web": "^9.3.2",
     "@tanstack/react-query": "^4.2.1",
     "@tanstack/react-query-devtools": "^4.2.3",
@@ -136,7 +137,7 @@
     "js-cookie": "^2.2.1",
     "md5-file": "^4.0.0",
     "medium-zoom": "^1.0.5",
-    "node-sass": "^7.0.1",
+    "node-sass": "4.14.1",
     "numeral": "^2.0.6",
     "preact": "^10.5.14",
     "react": "^18.0.0",

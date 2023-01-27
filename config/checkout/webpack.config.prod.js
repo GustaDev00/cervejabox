@@ -11,7 +11,7 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const common = require("./webpack.common.js");
 
 const ROOT_DIR = path.resolve(__dirname, "../..");
-const DIST_DIR = path.resolve(ROOT_DIR, "dist");
+const DIST_DIR = path.resolve(ROOT_DIR, "disteste");
 
 const NAME_PROJECT = "bbt";
 
