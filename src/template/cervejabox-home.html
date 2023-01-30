@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+   <head>
+      <vtex:template id="cervejabox-includes-header" />
+   </head>
+   <body>
+      <vtex:template id="cervejabox-menumobile" />
+        <h1 class="hidden">Cerveja Box - Loja Online e Clube de Cervejas Artesanais por Assinatura</h1>
+      <div class="tpl-wrapper">
+        <!-- 21/07/2022 - Gustavo Felipe - inserted tarja -->
+         <vtex:template id="cervejabox-header" />
+         <main id="main">
+            <div class="tpl-content">
+               <section id="bloco-a">
+                  <div class="tpl-center">
+                     <div id="slideHome">
+                        <div class="slide">
+                           <vtex:contentPlaceHolder id="slideHome" />
+                        </div>
+                     </div>
+                     <div id="bannerPrincipal" class="js--lazyload has--lazyload" data-noscript="">
+                        <noscript><vtex:contentPlaceHolder id="bannerPrincipal" /></noscript>
+                     </div>
+                  </div>
+               </section>
+               <!--CRO EM TESTE | 126 - [home][mobile] substituir banners + banner clube -->
+               <section id="bloco-z" style="display:none">
+                    <vtex.cmc:bannersHomeMobile />
+               </section>
+               <!--CRO EM TESTE-->
+               <vtex.cmc:cadastroNews />
+                <div class="wapperLinkBanner" id="wapperBottomTriplo">
+                    <div class="tpl-center">
+                        <div class="box-banner"><a href="https://www.cervejabox.com.br/clube-de-cervejas-por-assinatura?utmi_cp=BannerMenorClube "><img width="370"
+                                    height="250" id="iarquivos/clube.png" alt="bannerBottomMiddle" src="arquivos/clube.png"
+                                    mêscomplete="complete" />
+                                <p>CLUBE DE CERVEJA</p>
+                            </a></div>
+                        <div class="box-banner"><a href="https://www.cervejabox.com.br/kits-cerveja-artesanal-presente?utmi_cp=BannerMenorPresenteaveis"><img width="370"
+                                    height="250" id="iarquivos/presenteaveis.png" alt="bannerBottomMiddle"
+                                    src="arquivos/presenteaveis.png" mêscomplete="complete" />
+                                <p>KITS PRESENTEÁVEIS</p>
+                            </a></div>
+                        <div class="box-banner"><a href="https://www.cervejabox.com.br/Ratebeer?utmi_cp=BannerMenorAvaliadas"><img width="370" height="250"
+                                    id="iarquivos/ratebeer.png" alt="bannerBottomMiddle" src="arquivos/ratebeer.png"
+                                    mêscomplete="complete" />
+                                <p>CERVEJAS AVALIADAS</p>
+                            </a></div>        
+                        <div class="box-banner"><a href="https://www.cervejabox.com.br/estilos/india-pale-ale---ipa?utmi_cp=BannerMenorIPA"><img width="370" height="250"
+                                id="iarquivos/compre-ipa.png" alt="bannerBottomMiddle" src="arquivos/ipa.png" mêscomplete="complete" />
+                            <p>CERVEJA IPA</p>
+                        </a></div>
+                        <div class="box-banner"><a href="https://www.cervejabox.com.br/kits-e-packs/kits-compre-e-ganhe?utmi_cp=BannerMenorGanhe"><img width="370" height="250"
+                                    id="iarquivos/compre-ganhe.png" alt="bannerBottomMiddle" src="arquivos/compre-ganhe.png"
+                                    mêscomplete="complete" />
+                                <p>COMPRE E GANHE</p>
+                            </a></div>
+                    </div>
+                </div>
+               <section id="bloco-c" class="wrapPrateleira">
+                  <div class="tpl-center">
+                     <h2 class="titulo"><span></span></h2>
+                     <div class="prateleira01">
+                        <vtex:contentPlaceHolder id="prateleira01" />
+                     </div>
+                     <a href="/destaques" class="verTodas" title="Ver todas +">Ver todos os Destaques +</a>
+                  </div>
+               </section>
+               <section id="bloco-b" class="bannerTriplo">
+                  <div class="tpl-center js--lazyload has--lazyload" data-noscript="">
+                     <noscript><vtex:contentPlaceHolder id="bannerTriplo" /></noscript>
+                  </div>
+               </section>
+               <section id="bloco-d" class="wrapPrateleira">
+                  <div class="tpl-center">
+                     <h2 class="titulo"><span></span></h2>
+                     <div class="prateleira02">
+                        <vtex:contentPlaceHolder id="prateleira02" />
+                     </div>
+                     <a href="/mais-vendidos" class="verTodas" title="Ver todas +">Ver todos os Mais Vendidos +</a>
+                  </div>
+               </section>
+               <vtex.cmc:marcas />
+               <section id="bloco-e" class="wrapPrateleira">
+                  <div class="tpl-center">
+                     <h2 class="titulo"><span></span></h2>
+                     <div class="prateleira03">
+                        <vtex:contentPlaceHolder id="prateleira03" />
+                     </div>
+                     <a href="/novidades" class="verTodas" title="Ver todas">Ver todas as Novidades +</a>
+                  </div>
+               </section>
+               <section id="bloco-f" class="wrapPrateleira">
+                  <div class="tpl-center">
+                     <h2 class="titulo"><span></span></h2>
+                     <div class="prateleira04">
+                        <vtex:contentPlaceHolder id="prateleira04" />
+                     </div>
+                     <a href="/promocoes" class="verTodas" title="Ver todas">Ver todas as Promoções +</a>
+                  </div>
+               </section>
+               <vtex:template id="cervejabox-wrapperBottomTriplo" />
+            </div>
+         </main>
+         <vtex:template id="cervejabox-footer" />
+      </div>
+      <vtex:template id="cervejabox-includes-scripts" />
+   </body>
+</html>
