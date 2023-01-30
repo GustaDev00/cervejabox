@@ -3,9 +3,9 @@ const Product = () => {
     methods: {
       pickSku: async function () {
         const packSku = await this.searchSku([vtxctx.skus]);
+        if(!packSku[0].pack?.length) return;
 
         const products = await this.searchSku(packSku[0].pack[0].split(","));
-
         if (!products.length) return;
 
         const sectionsPage = document.querySelector("#react-compre-id");
@@ -221,7 +221,6 @@ const Product = () => {
     },
     init: function () {
       this.methods.pickSku();
-      this.methods.openMiniCart();
     },
   };
 
