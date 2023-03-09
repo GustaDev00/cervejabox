@@ -1,0 +1,31 @@
+.wrapperFiltros{
+    overflow: scroll;
+    @media (max-width: 1025px) {
+        .search-single-navigator{
+            display: none !important;
+        }
+        .menu-departamento{
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        .menu-navegue, .bt-refinar{
+            display: none;
+        }
+    }
+    .seo-content-filter{
+        margin-top: 20px;
+        @media (max-width: 1025px){
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+        h2{
+            font-size: 1.4em;
+            margin-bottom: 12px;
+            letter-spacing: .1em;
+        }
+        p{
+            margin-bottom: 10px;
+            line-height: 130%;
+        }
+    }
+}
