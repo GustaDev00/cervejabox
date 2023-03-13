@@ -20,6 +20,7 @@ const btnWhats = () => {
         `;
 
   let bodyClass = document.querySelector("footer#footer");
+  if(window.location.href.includes('account')) return
   bodyClass.innerHTML += html;
 
   function removeBtnWhats() {
