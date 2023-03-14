@@ -83,14 +83,17 @@ body.black-friday-cerveja.home {
   justify-content: flex-end;
   font-size: 20px;
   position: relative;
-  top: 0px;
-  left: 20px;
+  top: 50px;
+  left: 30px;
 }
 
 span.close-modal-discount {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  background: white;
+    width: 24px;
+    height: 24px;
 }
 .modal-discount-blackout {
   position: fixed;

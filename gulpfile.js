@@ -28,20 +28,20 @@ const paths = {
         dest: '/'
     },
     sass: {
-        dest: './build/arquivos/',
+        dest: './build/',
         src: './src/styles/scss/*.scss'
     },
     cssold: {
-        dest: './build/old/css/',
+        dest: './build/',
         src: './src/styles/css/*.css'
     },
     scripts: {
-        dest: './build/arquivos/',
+        dest: './build/',
         src: './src/scripts/app/index.js',
         watch: './src/scripts/app/**/*.js'
     },
     scriptsOld: {
-        dest: './build/old/js/',
+        dest: './build/',
         src: './src/scripts/old/*.js'
     }
 }
@@ -68,7 +68,7 @@ gulp.task('browserSyncProxy', function () {
 		serveStatic: [
 			{
 				route: '/arquivos',
-				dir: ['./build/arquivos']
+				dir: ['./build']
 			}
 		]
 	})

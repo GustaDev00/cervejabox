@@ -99,6 +99,7 @@ const Popup = () => {
       },
     },
     init: function () {
+      ModalFunction.event.showModal();
       document.onmouseleave = function () {
         if (!localStorage.getItem("clube-de-cervejas")) {
           localStorage.setItem("clube-de-cervejas", true);

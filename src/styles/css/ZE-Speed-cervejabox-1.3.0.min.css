@@ -2224,9 +2224,9 @@ body {
     background: #fff;
     font-size: 14px;
     letter-spacing: 1px;
-    font-family: Teko,sans-serif;
+    font-family: Teko,sans-serif !important;
     font-weight: 400;
-    font-style: normal
+    font-style: normal !important
 }
 
 body #newsPop {
