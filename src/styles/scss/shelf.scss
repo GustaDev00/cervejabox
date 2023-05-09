@@ -1,0 +1,50 @@
+.prateleira {
+  .shelf-wrapper {
+    .wrapperConteudo {
+      .boxWrapPreceComprar {
+        //dar um display none nessa class
+
+        &.no-button-add {
+          //   display: flex !important;
+          justify-content: space-between;
+
+          .wrapperPreco .preco {
+            display: flex;
+            align-items: end;
+            padding-top: 10px;
+            span {
+              height: fit-content;
+              margin-right: 10px;
+
+              &:first-child {
+                font-size: 16px;
+              }
+              &:last-child {
+                font-size: 22px;
+              }
+              strong {
+                width: max-content;
+              }
+            }
+          }
+          .wrapperCompra {
+            width: fit-content;
+
+            .quantity {
+              width: 80px;
+            }
+          }
+        }
+
+        &.button-add-display {
+          //   display: block !important;
+
+          .wrapperCompra,
+          .wrapperCompra button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
