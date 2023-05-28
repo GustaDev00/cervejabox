@@ -6,7 +6,7 @@
         display: none;
 
         &.no-button-add {
-          display: flex !important;
+          // display: flex !important;
           justify-content: space-between;
 
           .wrapperPreco .preco {
@@ -37,8 +37,12 @@
           }
         }
 
+        &.no-stock-teste {
+          // display: block;
+        }
+
         &.button-add-display {
-          display: block !important;
+          // display: block !important;
 
           .wrapperCompra,
           .wrapperCompra button {
