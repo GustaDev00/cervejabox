@@ -4,22 +4,3 @@
   height: 25px;
   background-color: #00cd73;
 }
-
-.nav-gwbar-single-rows {
-  background: none;
-  a {
-    img.mobile {
-      width: 100vw;
-      @media (min-width: 768px) {
-        display: none;
-      }
-    }
-
-    img.desktop {
-      width: 100vw;
-      @media (max-width: 769px) {
-        display: none;
-      }
-    }
-  }
-}

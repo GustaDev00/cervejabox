@@ -1,6 +1,6 @@
 body.black-friday-cerveja.home {
   .nav-gwbar-single-rows {
-    display: none !important;
+    display: flex !important;
   }
   #bloco-c {
     margin-bottom: 0px !important;
@@ -92,8 +92,8 @@ span.close-modal-discount {
   border: none;
   cursor: pointer;
   background: white;
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 .modal-discount-blackout {
   position: fixed;
