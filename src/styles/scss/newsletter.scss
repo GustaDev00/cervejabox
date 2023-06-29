@@ -1,0 +1,71 @@
+#footer {
+  .topBar {
+    background: #ffb600;
+  }
+}
+
+.cadastroNews {
+  background: #ffb600 !important;
+  display: flex !important;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  gap: 20px;
+  .texto {
+    position: inherit !important;
+    @media (max-width: 768px) {
+      width: 20rem !important;
+      font-size: 1.8rem !important;
+      line-height: 2rem !important;
+    }
+    strong {
+      color: black !important;
+    }
+  }
+  .newsletterNews {
+    display: flex !important;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    gap: 10px;
+    button {
+      width: max-content;
+      height: 2.6rem;
+      line-height: 2.6rem;
+      font-size: 1rem;
+      float: right;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: inherit;
+      cursor: pointer;
+      border: 0;
+      -webkit-border-radius: 0.2rem;
+      -moz-border-radius: 0.2rem;
+      border-radius: 0.2rem;
+      background-color: #466096;
+    }
+    input {
+      width: 18rem;
+      height: 2.6rem;
+      border: 1px solid #d3d3d3;
+      background-color: #fff;
+      padding-left: 1rem;
+      color: #929292;
+      font-weight: 300;
+      font-family: Oswald, sans-serif;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      letter-spacing: 0.5px;
+    }
+  }
+  form {
+    display: none !important;
+  }
+}

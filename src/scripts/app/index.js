@@ -6,9 +6,17 @@ import BlackFridayCerveja from "./pages/black-friday-cerveja";
 import btnWhats from "./modules/btn-whats";
 import Popup from "./modules/Popup";
 import schema from "./modules/schema";
+import FormB2B from "./modules/form";
 
 window.addEventListener("load", () => {
   const $bodyClass = document.querySelector("body");
+  if (
+    window.location.href
+      .toLowerCase()
+      .includes("distribuidora-cerveja-artesanal-b2b")
+  ) {
+    FormB2B();
+  }
 
   if (
     !$bodyClass.className.toLowerCase().includes("clube-de-cervejas") &&
