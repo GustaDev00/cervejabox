@@ -7,9 +7,12 @@ import btnWhats from "./modules/btn-whats";
 import Popup from "./modules/Popup";
 import schema from "./modules/schema";
 import FormB2B from "./modules/form";
+import newsletter from "./modules/newsletter";
 
 window.addEventListener("load", () => {
   const $bodyClass = document.querySelector("body");
+  newsletter();
+
   if (
     window.location.href
       .toLowerCase()
