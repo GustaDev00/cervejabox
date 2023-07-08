@@ -1,21 +1,10 @@
+import VMasker from "vanilla-masker";
 const newsletter = () => {
   const whatsappInput = document.querySelector(".newsletterNews input.whats");
   const form = document.querySelector(".newsletterNews");
   if (!form) return;
 
-  whatsappInput.addEventListener("input", formatWhatsapp);
-
-  function formatWhatsapp() {
-    let value = whatsappInput.value;
-
-    value = value.replace(/\D/g, "");
-
-    if (value.length > 2) {
-      value = value.replace(/^(\d{2})(\d{0,5})(\d{0,4}).*/, "$1 $2-$3");
-    }
-
-    whatsappInput.value = value;
-  }
+  VMasker(whatsappInput).maskPattern("(99) 99999-9999");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();

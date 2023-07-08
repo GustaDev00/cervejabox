@@ -72,6 +72,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "node-sass": "^7.0.1",
+    "vanilla-masker": "^1.2.0",
     "yarn": "^1.22.19"
   }
 }
