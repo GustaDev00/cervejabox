@@ -2411,7 +2411,9 @@ body #newsPop .content .wrapper .wrap p {
 }
 
 body #newsPop .content .wrapper .wrap form {
-    display: inline-block;
+    display: grid;
+    gap: 5px;
+    justify-items: center;
     position: relative;
     margin-top: 20px;
     width: 100%

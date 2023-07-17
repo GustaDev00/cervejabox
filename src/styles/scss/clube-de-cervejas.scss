@@ -1,0 +1,51 @@
+body.clube-de-cervejas {
+  main {
+    div {
+      .comoFunciona {
+        ul {
+          flex-flow: nowrap row;
+          li {
+            p {
+              display: none;
+            }
+            img {
+              width: 100px;
+              height: fit-content;
+            }
+            &:nth-of-type(2) {
+              &::before,
+              p {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .beneficios {
+        width: 90%;
+        margin: auto;
+        h2.titulo {
+          border-top: 2px solid #ffb600;
+          border-bottom: none;
+          padding-top: 15px;
+          margin-bottom: 15px;
+        }
+        ul {
+          li {
+            &:nth-of-type(even) {
+              display: flex;
+              flex-direction: row-reverse;
+            }
+            border-bottom: 2px solid #ffb600;
+            padding: 0 10px 15px;
+          }
+        }
+      }
+      .bt.assine {
+        background-color: #0046a1;
+        border: none;
+        color: white;
+      }
+    }
+  }
+}
