@@ -36,4 +36,12 @@ window.addEventListener("load", () => {
   $bodyClass.className.toLowerCase().includes("black-friday-cerveja home") &&
     BlackFridayCerveja();
   $bodyClass.className.toLowerCase().includes("produto") && Product();
+
+  if (
+    window.innerWidth > 750 &&
+    $bodyClass.className.toLowerCase().includes("clube-de-cervejas-planos")
+  ) {
+    window.location.href =
+      "/clube-de-cervejas-por-assinatura?utmi_cp=pageTesteClube";
+  }
 });

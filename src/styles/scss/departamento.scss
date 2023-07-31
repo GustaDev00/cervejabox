@@ -1,0 +1,53 @@
+body.internasComum.departamento---REMOVE {
+  // remove o ---Remove para ativar
+  main .tpl-content .tpl-center {
+    .sidebar {
+      width: 100%;
+      float: none;
+
+      .wrapperFiltros {
+        display: flex;
+        overflow: unset;
+        align-items: center;
+
+        .navigation-tabs {
+          width: 100%;
+          .menu-departamento {
+            width: 100%;
+            & > div {
+              .search-multiple-navigator {
+                h5,
+                h4,
+                h3,
+                h2,
+                h1,
+                p,
+                span,
+                label {
+                  font-size: 8px !important;
+                }
+                display: flex !important;
+                fieldset {
+                  display: flex;
+                  align-items: center;
+                  //   width: 100%;
+                  & > div {
+                    display: flex;
+
+                    label {
+                      display: flex;
+                    }
+                  }
+                }
+
+                fieldset:not(.filtro_tipo):not(.filtro_aroma) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

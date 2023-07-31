@@ -1,12 +1,35 @@
-body.clube-de-cerve1jas {
+body.clube-de-cervejas-planos.clube-de-cervejas {
   main {
     div {
       .comoFunciona {
+        width: 100%;
+        h2 {
+          font-family: inherit;
+          font-size: 28px;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #333;
+          width: 100%;
+          text-align: center;
+          display: block;
+          border-bottom: none;
+          span {
+            color: #ffb600;
+          }
+        }
         ul {
           flex-flow: nowrap row;
           li {
+            &.entrega::after {
+              display: none;
+            }
             p {
               display: none;
+            }
+            h3 {
+              width: 80%;
+              font-size: 16px;
+              font-weight: 500;
             }
             img {
               width: 100px;
@@ -20,9 +43,55 @@ body.clube-de-cerve1jas {
             }
           }
         }
+        article {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+
+          p {
+            text-align: center;
+            width: 90%;
+            padding: 10px 5px;
+            border: 1px solid #ffb600;
+            border-radius: 8px;
+          }
+
+          .icon_arrow {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+
+            &::before {
+              content: "";
+              width: calc(90% / 2);
+              height: 2px;
+              background-color: #ffb600;
+            }
+
+            &::after {
+              position: absolute;
+              bottom: 4px;
+              content: "";
+              width: 100%;
+              height: 62px;
+              clear: both;
+              display: block;
+              background-image: url(/arquivos/arrow-clube.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              transform: rotate(90deg);
+            }
+          }
+        }
       }
       .beneficios {
-        width: 90%;
+        width: 100%;
         margin: auto;
         h2.titulo {
           border-top: 2px solid #ffb600;
@@ -31,13 +100,33 @@ body.clube-de-cerve1jas {
           margin-bottom: 15px;
         }
         ul {
+          flex-flow: nowrap column;
           li {
+            width: 100%;
+            margin: 0;
+            justify-content: space-between;
+
+            .wrap {
+              max-width: 240px;
+            }
+            h3 {
+              text-align: center;
+            }
+            p {
+              text-align: right;
+              strong {
+                color: rgb(249, 183, 0);
+              }
+            }
             &:nth-of-type(even) {
               display: flex;
               flex-direction: row-reverse;
+              p {
+                text-align: left;
+              }
             }
-            border-bottom: 2px solid #ffb600;
-            padding: 0 10px 15px;
+            border-bottom: 2px solid rgb(249, 183, 0);
+            padding: 10px 10px 15px;
           }
         }
       }
