@@ -12,6 +12,15 @@ const Product = () => {
         sectionsPage.innerHTML += this.wrtiteHtml(products);
         this.carrossel();
       },
+      dataSku: async function () {
+        const infoSku = await this.searchSku([vtxctx.skus]);
+        if(!infoSku[0]['Descrição IA'][0]) return;
+
+        console.log('descricao: ', infoSku[0]['Descrição IA'][0])
+
+        const sectionsPage = document.querySelector(".insira-texto");
+        sectionsPage.innerHTML = infoSku[0]['Descrição IA'][0];
+      },
       carrossel: function () {
         $(".pack-list").slick({
           infinite: !0,
@@ -221,6 +230,7 @@ const Product = () => {
     },
     init: function () {
       this.methods.pickSku();
+      this.methods.dataSku();
     },
   };
 
